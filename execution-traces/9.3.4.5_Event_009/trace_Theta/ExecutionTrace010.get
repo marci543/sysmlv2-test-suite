@@ -1,0 +1,14 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.4.5_Event_009/.Verification0.gsm"
+@ ("E<> T1_statechart_Event009_StatechartStatechart")
+trace Event009Trace of Event009
+step {
+	act {
+		reset
+	}
+	assert {
+		state statechart_Event009_StatechartStatechart.SubEvent009.waiting;
+		variable statechart_Event009_StatechartStatechart.T1 = true;
+		variable statechart_Event009_StatechartStatechart.eventCounter = 0;
+		variable statechart_Event009_StatechartStatechart.regionsFinished = 0;
+	}
+}

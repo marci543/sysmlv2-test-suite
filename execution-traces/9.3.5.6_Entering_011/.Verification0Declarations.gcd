@@ -1,0 +1,16 @@
+package start
+type Transition : enum {
+	T1, T1_1, T1_2, T2, T2_1, T2_2, T3
+}
+interface Start {
+	in event in_StartSignal
+}
+interface Trace {
+	out event out_OutSignal(out_OutSignalValue_counter : integer)
+}
+interface Continue {
+	in event in_ContinueSignal
+}
+interface General {
+	in event in_GeneralSignal
+}

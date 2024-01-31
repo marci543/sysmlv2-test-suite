@@ -1,0 +1,36 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.4.5_Event_009/.Verification1.gsm"
+component Event009
+@
+	("statechart_Event009_StatechartStatechart.SubS1Left.InitialS1LeftOfSubS1Left --> statechart_Event009_StatechartStatechart.SubS1Left.S1_1")
+E F [ { variable statechart_Event009_StatechartStatechart.T1_1 } ]
+@
+	("statechart_Event009_StatechartStatechart.SubEvent009.S1 --> statechart_Event009_StatechartStatechart.SubEvent009.invalid")
+E F [ { variable statechart_Event009_StatechartStatechart.T3 } ]
+@
+	("statechart_Event009_StatechartStatechart.SubS1Right.S1_2 --> statechart_Event009_StatechartStatechart.SubS1Right.FinalStateOfSubS1Right")
+E F [ { variable statechart_Event009_StatechartStatechart.T2_2 } ]
+@
+	("statechart_Event009_StatechartStatechart.SubS1Left.S1_1 --> statechart_Event009_StatechartStatechart.SubS1Left.FinalStateOfSubS1Left")
+E F [ { variable statechart_Event009_StatechartStatechart.T1_2 } ]
+@
+	("statechart_Event009_StatechartStatechart.SubEvent009.S1 --> statechart_Event009_StatechartStatechart.SubEvent009.FinalStateOfSubEvent009")
+E F [ { variable statechart_Event009_StatechartStatechart.__id_S1_0_FinalStateOfSubEvent009_ } ]
+@
+	("statechart_Event009_StatechartStatechart.SubEvent009.waiting --> statechart_Event009_StatechartStatechart.SubEvent009.S1")
+E F [ { variable statechart_Event009_StatechartStatechart.T2 } ]
+@
+	("statechart_Event009_StatechartStatechart.SubS1Right.InitialS1RightOfSubS1Right --> statechart_Event009_StatechartStatechart.SubS1Right.S1_2")
+E F [ { variable statechart_Event009_StatechartStatechart.T2_1 } ]
+@
+	("statechart_Event009_StatechartStatechart.ParentS1Right.InitialS1RightOfParentS1Right --> statechart_Event009_StatechartStatechart.ParentS1Right.S1Right")
+E F [ { variable statechart_Event009_StatechartStatechart.__id_InitialS1RightOfParentS1Right_1_S1Right_
+	} ]
+@
+	("statechart_Event009_StatechartStatechart.ParentS1Left.InitialS1LeftOfParentS1Left --> statechart_Event009_StatechartStatechart.ParentS1Left.S1Left")
+E F [ { variable statechart_Event009_StatechartStatechart.__id_InitialS1LeftOfParentS1Left_2_S1Left_ } ]
+@
+	("statechart_Event009_StatechartStatechart.SubEvent009.InitialEvent009OfSubEvent009 --> statechart_Event009_StatechartStatechart.SubEvent009.waiting")
+E F [ { variable statechart_Event009_StatechartStatechart.T1 } ]
+@
+	("statechart_Event009_StatechartStatechart.SubEvent009.invalid --> statechart_Event009_StatechartStatechart.SubEvent009.FinalStateOfSubEvent009")
+E F [ { variable statechart_Event009_StatechartStatechart.T4 } ]

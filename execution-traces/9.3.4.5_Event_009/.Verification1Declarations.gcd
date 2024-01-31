@@ -1,0 +1,19 @@
+package general
+type Transition : enum {
+	T1, T2, T1_1, T1_2, T2_1, T2_2, T3, T4, T5
+}
+interface General {
+	in event in_GeneralSignal
+}
+interface Continue {
+	in event in_ContinueSignal
+}
+interface Start {
+	in event in_StartSignal
+}
+interface Pending {
+	in event in_PendingSignal
+}
+interface Trace {
+	out event out_OutSignal(out_OutSignalValue_counter : integer)
+}

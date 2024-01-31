@@ -1,0 +1,55 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.6_Entering_011/.Verification0.gsm"
+@
+("E<> (T3_statechart_Entering011_StatechartStatechart) && P_System._StableLocation_#[S1_entry, T1_1_effect, S1_1_entry, T2_1_effect, S1_2_entry, T3_testEnd]")
+trace Entering011Trace of Entering011
+step {
+	act {
+		reset
+	}
+	assert {
+		state statechart_Entering011_StatechartStatechart.SubEntering011.waiting;
+		variable statechart_Entering011_StatechartStatechart.T1 = true;
+		variable statechart_Entering011_StatechartStatechart.eventCounter = 0;
+		variable statechart_Entering011_StatechartStatechart.s11finished = false;
+		variable statechart_Entering011_StatechartStatechart.s12finished = false;
+	}
+}
+step {
+	act {
+		raise startPort.in_StartSignal()
+		schedule component
+	}
+	assert {
+		state statechart_Entering011_StatechartStatechart.SubEntering011.S1;
+		state statechart_Entering011_StatechartStatechart.ParentS1Left.S1Left;
+		state statechart_Entering011_StatechartStatechart.ParentS1Right.S1Right;
+		state statechart_Entering011_StatechartStatechart.SubS1Left.S1_1;
+		state statechart_Entering011_StatechartStatechart.SubS1Right.S1_2;
+		variable statechart_Entering011_StatechartStatechart.T1_1 = true;
+		variable statechart_Entering011_StatechartStatechart.T2 = true;
+		variable statechart_Entering011_StatechartStatechart.T2_1 = true;
+		variable statechart_Entering011_StatechartStatechart.eventCounter = 6;
+		variable statechart_Entering011_StatechartStatechart.s11finished = false;
+		variable statechart_Entering011_StatechartStatechart.s12finished = true;
+		raise T2.out_OutSignal(1);
+		raise S1_entry.out_OutSignal(2);
+		raise T1_1_effect.out_OutSignal(3);
+		raise S1_1_entry.out_OutSignal(4);
+		raise T2_1_effect.out_OutSignal(5);
+		raise S1_2_entry.out_OutSignal(6);
+	}
+}
+step {
+	act {
+		raise continuePort.in_ContinueSignal()
+		schedule component
+	}
+	assert {
+		raise T3_testEnd.out_OutSignal(7);
+		state statechart_Entering011_StatechartStatechart.SubEntering011.FinalStateOfSubEntering011;
+		variable statechart_Entering011_StatechartStatechart.T3 = true;
+		variable statechart_Entering011_StatechartStatechart.eventCounter = 7;
+		variable statechart_Entering011_StatechartStatechart.s11finished = false;
+		variable statechart_Entering011_StatechartStatechart.s12finished = true;
+	}
+}

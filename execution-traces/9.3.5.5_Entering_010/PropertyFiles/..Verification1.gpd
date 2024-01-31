@@ -1,0 +1,31 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification1.gsm"
+component Entering010
+@
+	("statechart_Entering010_StatechartStatechart.ParentS1Right.InitialS1RightOfParentS1Right --> statechart_Entering010_StatechartStatechart.ParentS1Right.S1Right")
+E F [ { variable
+	statechart_Entering010_StatechartStatechart.__id_InitialS1RightOfParentS1Right_0_S1Right_ } ]
+@
+	("statechart_Entering010_StatechartStatechart.SubS1Right.InitialS1RightOfSubS1Right --> statechart_Entering010_StatechartStatechart.SubS1Right.S2_1")
+E F [ { variable statechart_Entering010_StatechartStatechart.T2_1 } ]
+@
+	("statechart_Entering010_StatechartStatechart.SubS1Right.S2_1 --> statechart_Entering010_StatechartStatechart.SubS1Right.FinalStateOfSubS1Right")
+E F [ { variable statechart_Entering010_StatechartStatechart.T2_2 } ]
+@
+	("statechart_Entering010_StatechartStatechart.SubEntering010.S1 --> statechart_Entering010_StatechartStatechart.SubEntering010.FinalStateOfSubEntering010")
+E F [ { variable statechart_Entering010_StatechartStatechart.T3 } ]
+@
+	("statechart_Entering010_StatechartStatechart.ParentS1Left.InitialS1LeftOfParentS1Left --> statechart_Entering010_StatechartStatechart.ParentS1Left.S1Left")
+E F [ { variable statechart_Entering010_StatechartStatechart.__id_InitialS1LeftOfParentS1Left_1_S1Left_
+	} ]
+@
+	("statechart_Entering010_StatechartStatechart.SubEntering010.wait --> statechart_Entering010_StatechartStatechart.SubS1Left.S1_1")
+E F [ { variable statechart_Entering010_StatechartStatechart.T2 } ]
+@
+	("statechart_Entering010_StatechartStatechart.SubS1Left.InitialS1LeftOfSubS1Left --> statechart_Entering010_StatechartStatechart.SubS1Left.S1_1")
+E F [ { variable statechart_Entering010_StatechartStatechart.T1_1 } ]
+@
+	("statechart_Entering010_StatechartStatechart.SubS1Left.S1_1 --> statechart_Entering010_StatechartStatechart.SubS1Left.FinalStateOfSubS1Left")
+E F [ { variable statechart_Entering010_StatechartStatechart.T1_2 } ]
+@
+	("statechart_Entering010_StatechartStatechart.SubEntering010.InitialEntering010OfSubEntering010 --> statechart_Entering010_StatechartStatechart.SubEntering010.wait")
+E F [ { variable statechart_Entering010_StatechartStatechart.T1 } ]

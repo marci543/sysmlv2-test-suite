@@ -1,0 +1,48 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.6.4_Exiting_003/.Verification1.gsm"
+@ ("E<> T3_statechart_Exiting003_StatechartStatechart")
+trace Exiting003Trace of Exiting003
+step {
+	act {
+		reset
+	}
+	assert {
+		state statechart_Exiting003_StatechartStatechart.SubExiting003.wait;
+		variable statechart_Exiting003_StatechartStatechart.T1 = true;
+		variable statechart_Exiting003_StatechartStatechart.eventCounter = 0;
+	}
+}
+step {
+	act {
+		raise startPort.in_StartSignal()
+		schedule component
+	}
+	assert {
+		state statechart_Exiting003_StatechartStatechart.SubExiting003.S1;
+		state statechart_Exiting003_StatechartStatechart.SubS1.S1_1;
+		state statechart_Exiting003_StatechartStatechart.ParentS1_1Left.S1_1Left;
+		state statechart_Exiting003_StatechartStatechart.ParentS1_1Right.S1_1Right;
+		state statechart_Exiting003_StatechartStatechart.SubS1_1Left.S1_1_1;
+		state statechart_Exiting003_StatechartStatechart.SubS1_1Right.S1_2_1;
+		variable statechart_Exiting003_StatechartStatechart.T1_1 = true;
+		variable statechart_Exiting003_StatechartStatechart.T1_1_1 = true;
+		variable statechart_Exiting003_StatechartStatechart.T1_2_1 = true;
+		variable statechart_Exiting003_StatechartStatechart.T2 = true;
+		variable statechart_Exiting003_StatechartStatechart.eventCounter = 0;
+	}
+}
+step {
+	act {
+		raise continuePort.in_ContinueSignal()
+		schedule component
+	}
+	assert {
+		raise S1_1_exit.out_OutSignal(3);
+		raise S1_exit.out_OutSignal(4);
+		raise S1_2_1_exit.out_OutSignal(1);
+		raise S1_1_1_exit.out_OutSignal(2);
+		raise T3_testEnd.out_OutSignal(5);
+		state statechart_Exiting003_StatechartStatechart.SubExiting003.FinalStateOfSubExiting003;
+		variable statechart_Exiting003_StatechartStatechart.T3 = true;
+		variable statechart_Exiting003_StatechartStatechart.eventCounter = 5;
+	}
+}

@@ -1,0 +1,121 @@
+package exiting003
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.6.4_Exiting_003/.Verification1Declarations.gcd"
+scheduled-async Exiting003 [
+	port startPort : provides Start
+	port continuePort : provides Continue
+	port pendingPort : provides Pending
+	port generalPort : provides General
+	port S1_exit : provides Trace
+	port S1_1_exit : provides Trace
+	port S1_1_1_exit : provides Trace
+	port S1_2_1_exit : provides Trace
+	port T3_testEnd : provides Trace
+] {
+	component ^statechart : ^statechart
+	bind startPort -> ^statechart.startPort
+	bind continuePort -> ^statechart.continuePort
+	bind pendingPort -> ^statechart.pendingPort
+	bind generalPort -> ^statechart.generalPort
+	bind S1_exit -> ^statechart.S1_exit
+	bind S1_1_exit -> ^statechart.S1_1_exit
+	bind S1_1_1_exit -> ^statechart.S1_1_1_exit
+	bind S1_2_1_exit -> ^statechart.S1_2_1_exit
+	bind T3_testEnd -> ^statechart.T3_testEnd
+}
+adapter ^statechart of component Exiting003_StatechartStatechart : Exiting003_StatechartStatechart
+{
+	when any / run
+	queue statechartQueue (priority = 1, capacity = 4) {
+		startPort.any, continuePort.any, pendingPort.any
+	}
+}
+@RegionSchedule = bottom-up
+@TransitionPriority = value-based
+@GuardEvaluation = beginning-of-step statechart Exiting003_StatechartStatechart [
+	port startPort : provides Start
+	port continuePort : provides Continue
+	port pendingPort : provides Pending
+	port generalPort : provides General
+	port S1_1_1_exit : provides Trace
+	port S1_2_1_exit : provides Trace
+	port S1_1_exit : provides Trace
+	port S1_exit : provides Trace
+	port T3_testEnd : provides Trace
+] {
+	var eventCounter : integer := 0
+	var TRANSITION__TO__wait : Transition := Transition::T1
+	var TRANSITION__TO__S1_1 : Transition := Transition::T1_1
+	var TRANSITION__TO__S1_1_1 : Transition := Transition::T1_1_1
+	var TRANSITION__TO__S1_2_1 : Transition := Transition::T1_2_1
+	region SubExiting003 {
+		state wait
+		state S1 {
+			exit / {
+				eventCounter := eventCounter + 1;
+				raise S1_exit.out_OutSignal(eventCounter);
+			}
+			region SubS1 {
+				state S1_1 {
+					exit / {
+						eventCounter := eventCounter + 1;
+						raise S1_1_exit.out_OutSignal(eventCounter);
+					}
+					region ParentS1_1Right {
+						state S1_1Right {
+							region SubS1_1Right {
+								state S1_2_1 {
+									exit / {
+										eventCounter := eventCounter + 1;
+										raise S1_2_1_exit.out_OutSignal(eventCounter);
+									}
+								}
+								initial InitialS1_1RightOfSubS1_1Right
+								state FinalStateOfSubS1_1Right
+							}
+						}
+						initial InitialS1_1RightOfParentS1_1Right
+					}
+					region ParentS1_1Left {
+						state S1_1Left {
+							region SubS1_1Left {
+								state S1_1_1 {
+									exit / {
+										eventCounter := eventCounter + 1;
+										raise S1_1_1_exit.out_OutSignal(eventCounter);
+									}
+								}
+								initial InitialS1_1LeftOfSubS1_1Left
+								state FinalStateOfSubS1_1Left
+							}
+						}
+						initial InitialS1_1LeftOfParentS1_1Left
+					}
+				}
+				initial InitialS1OfSubS1
+			}
+		}
+		initial InitialExiting003OfSubExiting003
+		state FinalStateOfSubExiting003
+	}
+	@(T1_2_1)
+	transition (4) from InitialS1_1RightOfSubS1_1Right to S1_2_1
+	@(T1)
+	transition (1) from InitialExiting003OfSubExiting003 to wait
+	transition (3) from InitialS1_1RightOfParentS1_1Right to S1_1Right
+	@(T1_1)
+	transition (2) from InitialS1OfSubS1 to S1_1
+	@(T1_1_1)
+	transition (4) from InitialS1_1LeftOfSubS1_1Left to S1_1_1
+	transition (3) from InitialS1_1LeftOfParentS1_1Left to S1_1Left
+	@(T2)
+	transition (1) from wait to S1 when startPort.in_StartSignal
+	@(T1_1_2)
+	transition (4) from S1_1_1 to FinalStateOfSubS1_1Left when pendingPort.in_PendingSignal
+	@(T1_2_2)
+	transition (4) from S1_2_1 to FinalStateOfSubS1_1Right when pendingPort.in_PendingSignal
+	@(T3)
+	transition (1) from S1 to FinalStateOfSubExiting003 when continuePort.in_ContinueSignal / {
+		eventCounter := eventCounter + 1;
+		raise T3_testEnd.out_OutSignal(eventCounter);
+	}
+}

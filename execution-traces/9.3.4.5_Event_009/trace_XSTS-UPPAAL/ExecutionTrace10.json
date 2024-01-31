@@ -1,0 +1,1 @@
+{"query":"A[] ((regionsFinished_statechart_Event009_StatechartStatechart >= 2)) || !P_System._StableLocation_","result":"FALSE","parameters":["-C -T -t0"],"executionTime":"61 MILLISECONDS"}

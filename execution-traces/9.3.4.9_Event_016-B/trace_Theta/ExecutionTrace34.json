@@ -1,0 +1,1 @@
+{"query":"E<> T2_1_statechart_Event016B_StatechartStatechart","result":"TRUE","parameters":["","--domain EXPL --refinement SEQ_ITP --maxenum 250 --initprec CTRL","--domain EXPL_PRED_COMBINED --autoexpl NEWOPERANDS --initprec CTRL"],"executionTime":"922 MILLISECONDS"}

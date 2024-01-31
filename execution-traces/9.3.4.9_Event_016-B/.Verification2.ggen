@@ -1,0 +1,7 @@
+import ".Verification2.gcd"
+
+analysis {
+	component : Event016B
+	language : XSTS-UPPAAL
+	transition-coverage
+}

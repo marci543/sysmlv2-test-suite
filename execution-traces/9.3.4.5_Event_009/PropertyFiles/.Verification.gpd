@@ -1,0 +1,3 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.4.5_Event_009/.Verification1.gcd"
+component Event009
+A G [ { variable ^statechart -> Event009_StatechartStatechart.regionsFinished >= 2 } ]

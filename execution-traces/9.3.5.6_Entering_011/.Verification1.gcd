@@ -1,0 +1,149 @@
+package entering011
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.6_Entering_011/.Verification1Declarations.gcd"
+scheduled-async Entering011 [
+	port startPort : provides Start
+	port continuePort : provides Continue
+	port generalPort : provides General
+	port S1_entry : provides Trace
+	port S1_1_entry : provides Trace
+	port S1_2_entry : provides Trace
+	port T1_1_effect : provides Trace
+	port T2_1_effect : provides Trace
+	port T1 : provides Trace
+	port T1_2 : provides Trace
+	port T2 : provides Trace
+	port T2_2 : provides Trace
+	port T3_testEnd : provides Trace
+] {
+	component ^statechart : ^statechart
+	bind startPort -> ^statechart.startPort
+	bind continuePort -> ^statechart.continuePort
+	bind generalPort -> ^statechart.generalPort
+	bind S1_entry -> ^statechart.S1_entry
+	bind S1_1_entry -> ^statechart.S1_1_entry
+	bind S1_2_entry -> ^statechart.S1_2_entry
+	bind T1_1_effect -> ^statechart.T1_1_effect
+	bind T2_1_effect -> ^statechart.T2_1_effect
+	bind T1 -> ^statechart.T1
+	bind T1_2 -> ^statechart.T1_2
+	bind T2 -> ^statechart.T2
+	bind T2_2 -> ^statechart.T2_2
+	bind T3_testEnd -> ^statechart.T3_testEnd
+}
+adapter ^statechart of component Entering011_StatechartStatechart :
+	Entering011_StatechartStatechart
+{
+	when any / run
+	queue statechartQueue (priority = 1, capacity = 4) {
+		startPort.any, continuePort.any, generalPort.any
+	}
+}
+@RegionSchedule = bottom-up
+@TransitionPriority = value-based
+@GuardEvaluation = beginning-of-step statechart Entering011_StatechartStatechart [
+	port startPort : provides Start
+	port continuePort : provides Continue
+	port generalPort : provides General
+	port S1_entry : provides Trace
+	port S1_1_entry : provides Trace
+	port S1_2_entry : provides Trace
+	port T1_1_effect : provides Trace
+	port T2_1_effect : provides Trace
+	port T1 : provides Trace
+	port T1_2 : provides Trace
+	port T2 : provides Trace
+	port T2_2 : provides Trace
+	port T3_testEnd : provides Trace
+] {
+	var eventCounter : integer := 0
+	var TRANSITION__TO__waiting : Transition := Transition::T1
+	var TRANSITION__FROM__waiting : Transition := Transition::T2
+	var TRANSITION__TO__S1_1 : Transition := Transition::T1_1
+	var TRANSITION__FROM__S1_1 : Transition := Transition::T1_2
+	var TRANSITION__TO__S1_2 : Transition := Transition::T2_1
+	var TRANSITION__FROM__S1_2 : Transition := Transition::T2_2
+	var TRANSITION__FROM__S1 : Transition := Transition::T3
+	var s11finished : boolean := false
+	var s12finished : boolean := false
+	region SubEntering011 {
+		state waiting
+		state S1 {
+			entry / {
+				eventCounter := eventCounter + 1;
+				raise S1_entry.out_OutSignal(eventCounter);
+			}
+			region ParentS1Right {
+				state S1Right {
+					entry / {
+						eventCounter := eventCounter + 1;
+						raise T2_1_effect.out_OutSignal(eventCounter);
+					}
+					region SubS1Right {
+						state S1_2 {
+							entry / {
+								eventCounter := eventCounter + 1;
+								raise S1_2_entry.out_OutSignal(eventCounter);
+								s12finished := true;
+							}
+						}
+						initial InitialS1RightOfSubS1Right
+						state FinalStateOfSubS1Right
+					}
+				}
+				initial InitialS1RightOfParentS1Right
+			}
+			region ParentS1Left {
+				state S1Left {
+					entry / {
+						eventCounter := eventCounter + 1;
+						raise T1_1_effect.out_OutSignal(eventCounter);
+					}
+					region SubS1Left {
+						state S1_1 {
+							entry / {
+								eventCounter := eventCounter + 1;
+								raise S1_1_entry.out_OutSignal(eventCounter);
+							}
+						}
+						initial InitialS1LeftOfSubS1Left
+						state FinalStateOfSubS1Left
+					}
+				}
+				initial InitialS1LeftOfParentS1Left
+			}
+		}
+		initial InitialEntering011OfSubEntering011
+		state FinalStateOfSubEntering011
+	}
+	transition (2) from InitialS1RightOfParentS1Right to S1Right
+	@(T1)
+	transition (1) from InitialEntering011OfSubEntering011 to waiting
+	@(T1_1)
+	transition (3) from InitialS1LeftOfSubS1Left to S1_1
+	@(T2_1)
+	transition (3) from InitialS1RightOfSubS1Right to S1_2
+	transition (2) from InitialS1LeftOfParentS1Left to S1Left
+	@(T2)
+	transition (1) from waiting to S1 when startPort.in_StartSignal / {
+		eventCounter := eventCounter + 1;
+		raise T2.out_OutSignal(eventCounter);
+	}
+	@(T3)
+	transition (1) from S1 to FinalStateOfSubEntering011 when continuePort.in_ContinueSignal / {
+		eventCounter := eventCounter + 1;
+		raise T3_testEnd.out_OutSignal(eventCounter);
+	}
+	@(T2_2)
+	transition (3) from S1_2 to FinalStateOfSubS1Right when generalPort.in_GeneralSignal [s12finished]
+		/ {
+		eventCounter := eventCounter + 1;
+		raise T2_2.out_OutSignal(eventCounter);
+	}
+	@(T1_2)
+	transition (3) from S1_1 to FinalStateOfSubS1Left when generalPort.in_GeneralSignal [s11finished]
+		/ {
+		eventCounter := eventCounter + 1;
+		raise T1_2.out_OutSignal(eventCounter);
+		s11finished := true;
+	}
+}

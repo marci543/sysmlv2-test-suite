@@ -1,0 +1,3 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.6_Entering_011/.Verification1.gcd"
+component Entering011
+A G [ { true } ]

@@ -1,0 +1,1 @@
+{"query":"E<> __id_InitialS1LeftOfParentS1Left_1_S1Left__statechart_Entering010_StatechartStatechart","result":"FALSE","parameters":["","--domain EXPL --refinement SEQ_ITP --maxenum 250 --initprec CTRL","--domain EXPL_PRED_COMBINED --autoexpl NEWOPERANDS --initprec CTRL"],"executionTime":"576 MILLISECONDS"}

@@ -1,0 +1,17 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.4.17_Event_019-E/.Verification0.gsm"
+@ ("E<> (T1_statechart_Event019E_StatechartStatechart) && P_System._StableLocation_")
+trace Event019ETrace of Event019E
+step {
+	act {
+		reset
+	}
+	assert {
+		state statechart_Event019E_StatechartStatechart.SubEvent019E.wait;
+		variable statechart_Event019E_StatechartStatechart.T1 = true;
+		variable statechart_Event019E_StatechartStatechart.eventCounter = 0;
+		variable statechart_Event019E_StatechartStatechart.outt = false;
+		variable statechart_Event019E_StatechartStatechart.s11finished = false;
+		variable statechart_Event019E_StatechartStatechart.s211finished = false;
+		variable statechart_Event019E_StatechartStatechart.s21finished = false;
+	}
+}

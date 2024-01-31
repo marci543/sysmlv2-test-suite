@@ -1,0 +1,31 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.6.6_Exiting_005/.Verification0.gsm"
+component Exiting005
+@
+	("statechart_Exiting005_StatechartStatechart.SubS1Left.InitialS1LeftOfSubS1Left --> statechart_Exiting005_StatechartStatechart.SubS1Left.S1_1")
+E F [ { variable statechart_Exiting005_StatechartStatechart.T1_1 } ]
+@
+	("statechart_Exiting005_StatechartStatechart.SubExiting005.wait --> statechart_Exiting005_StatechartStatechart.SubExiting005.S1")
+E F [ { variable statechart_Exiting005_StatechartStatechart.T2 } ]
+@
+	("statechart_Exiting005_StatechartStatechart.ParentS1Right.InitialS1RightOfParentS1Right --> statechart_Exiting005_StatechartStatechart.ParentS1Right.S1Right")
+E F [ { variable
+	statechart_Exiting005_StatechartStatechart.__id_InitialS1RightOfParentS1Right_0_S1Right_ } ]
+@
+	("statechart_Exiting005_StatechartStatechart.ParentS1Left.InitialS1LeftOfParentS1Left --> statechart_Exiting005_StatechartStatechart.ParentS1Left.S1Left")
+E F [ { variable statechart_Exiting005_StatechartStatechart.__id_InitialS1LeftOfParentS1Left_1_S1Left_ }
+	]
+@
+	("statechart_Exiting005_StatechartStatechart.SubExiting005.InitialExiting005OfSubExiting005 --> statechart_Exiting005_StatechartStatechart.SubExiting005.wait")
+E F [ { variable statechart_Exiting005_StatechartStatechart.T1 } ]
+@
+	("statechart_Exiting005_StatechartStatechart.SubS1Right.S2_1 --> statechart_Exiting005_StatechartStatechart.SubS1Right.FinalStateOfSubS1Right")
+E F [ { variable statechart_Exiting005_StatechartStatechart.T2_2 } ]
+@
+	("statechart_Exiting005_StatechartStatechart.SubS1Left.S1_1 --> statechart_Exiting005_StatechartStatechart.SubS1Left.FinalStateOfSubS1Left")
+E F [ { variable statechart_Exiting005_StatechartStatechart.T1_2 } ]
+@
+	("statechart_Exiting005_StatechartStatechart.SubExiting005.S1 --> statechart_Exiting005_StatechartStatechart.SubExiting005.FinalStateOfSubExiting005")
+E F [ { variable statechart_Exiting005_StatechartStatechart.T3 } ]
+@
+	("statechart_Exiting005_StatechartStatechart.SubS1Right.InitialS1RightOfSubS1Right --> statechart_Exiting005_StatechartStatechart.SubS1Right.S2_1")
+E F [ { variable statechart_Exiting005_StatechartStatechart.T2_1 } ]

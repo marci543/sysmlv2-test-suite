@@ -1,0 +1,3 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.4.9_Event_016-B/.Verification3.gcd"
+component Event016B
+A G [ { true } ]

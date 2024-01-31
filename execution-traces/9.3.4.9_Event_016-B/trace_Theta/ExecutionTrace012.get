@@ -1,0 +1,13 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.4.9_Event_016-B/.Verification0.gsm"
+@ ("E<> T1_statechart_Event016B_StatechartStatechart")
+trace Event016BTrace of Event016B
+step {
+	act {
+		reset
+	}
+	assert {
+		state statechart_Event016B_StatechartStatechart.SubEvent016B.wait;
+		variable statechart_Event016B_StatechartStatechart.T1 = true;
+		variable statechart_Event016B_StatechartStatechart.eventCounter = 0;
+	}
+}

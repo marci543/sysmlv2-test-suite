@@ -1,0 +1,50 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.6.6_Exiting_005/.Verification0.gsm"
+@ ("E<> T2_2_statechart_Exiting005_StatechartStatechart#[S2_1_exit]")
+trace Exiting005Trace of Exiting005
+step {
+	act {
+		reset
+	}
+	assert {
+		state statechart_Exiting005_StatechartStatechart.SubExiting005.wait;
+		variable statechart_Exiting005_StatechartStatechart.T1 = true;
+		variable statechart_Exiting005_StatechartStatechart.eventCounter = 0;
+		variable statechart_Exiting005_StatechartStatechart.s11finished = false;
+	}
+}
+step {
+	act {
+		raise startPort.in_StartSignal()
+		schedule component
+	}
+	assert {
+		state statechart_Exiting005_StatechartStatechart.SubExiting005.S1;
+		state statechart_Exiting005_StatechartStatechart.ParentS1Left.S1Left;
+		state statechart_Exiting005_StatechartStatechart.ParentS1Right.S1Right;
+		state statechart_Exiting005_StatechartStatechart.SubS1Left.S1_1;
+		state statechart_Exiting005_StatechartStatechart.SubS1Right.S2_1;
+		variable statechart_Exiting005_StatechartStatechart.T1_1 = true;
+		variable statechart_Exiting005_StatechartStatechart.T2 = true;
+		variable statechart_Exiting005_StatechartStatechart.T2_1 = true;
+		variable statechart_Exiting005_StatechartStatechart.eventCounter = 0;
+		variable statechart_Exiting005_StatechartStatechart.s11finished = false;
+	}
+}
+step {
+	act {
+		raise pendingPort.in_PendingSignal()
+		schedule component
+	}
+	assert {
+		state statechart_Exiting005_StatechartStatechart.SubExiting005.S1;
+		state statechart_Exiting005_StatechartStatechart.ParentS1Left.S1Left;
+		state statechart_Exiting005_StatechartStatechart.ParentS1Right.S1Right;
+		state statechart_Exiting005_StatechartStatechart.SubS1Left.S1_1;
+		state statechart_Exiting005_StatechartStatechart.SubS1Right.FinalStateOfSubS1Right;
+		variable statechart_Exiting005_StatechartStatechart.T2_2 = true;
+		variable statechart_Exiting005_StatechartStatechart.eventCounter = 2;
+		variable statechart_Exiting005_StatechartStatechart.s11finished = false;
+		raise S2_1_exit.out_OutSignal(1);
+		raise T2_2_effect.out_OutSignal(2);
+	}
+}

@@ -1,0 +1,144 @@
+package event009
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.4.5_Event_009/.Verification0Declarations.gcd"
+scheduled-async Event009 [
+	port startPort : provides Start
+	port continuePort : provides Continue
+	port pendingPort : provides Pending
+	port generalPort : provides General
+	port T1 : provides Trace
+	port T2 : provides Trace
+	port T1_1 : provides Trace
+	port T2_1 : provides Trace
+	port T1_2_effect : provides Trace
+	port T2_2_effect : provides Trace
+	port T3_effect : provides Trace
+	port T4_testEnd : provides Trace
+	port T5_testEnd : provides Trace
+] {
+	component ^statechart : ^statechart
+	bind startPort -> ^statechart.startPort
+	bind continuePort -> ^statechart.continuePort
+	bind pendingPort -> ^statechart.pendingPort
+	bind generalPort -> ^statechart.generalPort
+	bind T1 -> ^statechart.T1
+	bind T2 -> ^statechart.T2
+	bind T1_1 -> ^statechart.T1_1
+	bind T2_1 -> ^statechart.T2_1
+	bind T1_2_effect -> ^statechart.T1_2_effect
+	bind T2_2_effect -> ^statechart.T2_2_effect
+	bind T3_effect -> ^statechart.T3_effect
+	bind T4_testEnd -> ^statechart.T4_testEnd
+	bind T5_testEnd -> ^statechart.T5_testEnd
+}
+adapter ^statechart of component Event009_StatechartStatechart : Event009_StatechartStatechart
+{
+	when any / run
+	queue statechartQueue (priority = 1, capacity = 4) {
+		startPort.any, continuePort.any, pendingPort.any, generalPort.any
+	}
+}
+@RegionSchedule = bottom-up
+@TransitionPriority = value-based
+@GuardEvaluation = beginning-of-step statechart Event009_StatechartStatechart [
+	port startPort : provides Start
+	port continuePort : provides Continue
+	port pendingPort : provides Pending
+	port generalPort : provides General
+	port T1 : provides Trace
+	port T2 : provides Trace
+	port T1_1 : provides Trace
+	port T2_1 : provides Trace
+	port T1_2_effect : provides Trace
+	port T2_2_effect : provides Trace
+	port T3_effect : provides Trace
+	port T4_testEnd : provides Trace
+	port T5_testEnd : provides Trace
+] {
+	var eventCounter : integer := 0
+	var TRANSITION__TO__waiting : Transition := Transition::T1
+	var TRANSITION__FROM__waiting : Transition := Transition::T2
+	var TRANSITION__TO__S1_1 : Transition := Transition::T1_1
+	var TRANSITION__FROM__S1_1 : Transition := Transition::T1_2
+	var TRANSITION__TO__S1_2 : Transition := Transition::T2_1
+	var TRANSITION__FROM__S1_2 : Transition := Transition::T2_2
+	var TRANSITION__FROM__S1__TO__invalid : Transition := Transition::T3
+	var TRANSITION__FROM__invalid : Transition := Transition::T4
+	var TRANSITION__FROM__S1 : Transition := Transition::T5
+	var regionsFinished : integer := 0
+	region SubEvent009 {
+		state waiting
+		state S1 {
+			region ParentS1Left {
+				state S1Left {
+					entry / {
+						eventCounter := eventCounter + 1;
+						raise T1_1.out_OutSignal(eventCounter);
+					}
+					region SubS1Left {
+						state S1_1
+						initial InitialS1LeftOfSubS1Left
+						state FinalStateOfSubS1Left
+					}
+				}
+				initial InitialS1LeftOfParentS1Left
+			}
+			region ParentS1Right {
+				state S1Right {
+					entry / {
+						eventCounter := eventCounter + 1;
+						raise T2_1.out_OutSignal(eventCounter);
+					}
+					region SubS1Right {
+						state S1_2
+						initial InitialS1RightOfSubS1Right
+						state FinalStateOfSubS1Right
+					}
+				}
+				initial InitialS1RightOfParentS1Right
+			}
+		}
+		state invalid
+		initial InitialEvent009OfSubEvent009
+		state FinalStateOfSubEvent009
+	}
+	transition (2) from InitialS1RightOfParentS1Right to S1Right
+	transition (2) from InitialS1LeftOfParentS1Left to S1Left
+	@(T2_1)
+	transition (3) from InitialS1RightOfSubS1Right to S1_2
+	@(T1_1)
+	transition (3) from InitialS1LeftOfSubS1Left to S1_1
+	@(T1)
+	transition (1) from InitialEvent009OfSubEvent009 to waiting
+	@(T2)
+	transition (1) from waiting to S1 when startPort.in_StartSignal / {
+		eventCounter := eventCounter + 1;
+		raise T2.out_OutSignal(eventCounter);
+	}
+	@(T3)
+	transition (1) from S1 to invalid when pendingPort.in_PendingSignal / {
+		eventCounter := eventCounter + 1;
+		raise T3_effect.out_OutSignal(eventCounter);
+	}
+	transition (1) from S1 to FinalStateOfSubEvent009 when generalPort.in_GeneralSignal
+		[regionsFinished >= 2] / {
+		eventCounter := eventCounter + 1;
+		raise T5_testEnd.out_OutSignal(eventCounter);
+	}
+	@(T4)
+	transition (1) from invalid to FinalStateOfSubEvent009 when generalPort.in_GeneralSignal / {
+		eventCounter := eventCounter + 1;
+		raise T4_testEnd.out_OutSignal(eventCounter);
+	}
+	@(T2_2)
+	transition (3) from S1_2 to FinalStateOfSubS1Right when continuePort.in_ContinueSignal / {
+		eventCounter := eventCounter + 1;
+		regionsFinished := regionsFinished + 1;
+		raise T2_2_effect.out_OutSignal(eventCounter);
+	}
+	@(T1_2)
+	transition (3) from S1_1 to FinalStateOfSubS1Left when continuePort.in_ContinueSignal / {
+		eventCounter := eventCounter + 1;
+		regionsFinished := regionsFinished + 1;
+		raise T1_2_effect.out_OutSignal(eventCounter);
+	}
+}

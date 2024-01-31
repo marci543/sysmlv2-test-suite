@@ -1,0 +1,619 @@
+<nta>
+<declaration>
+
+
+bool S1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart;
+
+int S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart;
+
+bool startPort_in_StartSignal_In_statechart_Exiting005_StatechartStatechart;
+
+bool generalPort_in_GeneralSignal_In_statechart_Exiting005_StatechartStatechart;
+
+bool S1_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart;
+
+int S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart;
+
+bool T2_2_effect_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart;
+
+int T2_2_effect_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart;
+
+bool continuePort_in_ContinueSignal_In_statechart_Exiting005_StatechartStatechart;
+
+bool pendingPort_in_PendingSignal_In_statechart_Exiting005_StatechartStatechart;
+
+bool S2_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart;
+
+int S2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart;
+
+bool T3_testEnd_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart;
+
+int T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart;
+
+int[0, 3] subExiting005_statechart_Exiting005_StatechartStatechart;
+
+int[0, 1] parentS1Right_statechart_Exiting005_StatechartStatechart;
+
+int[0, 1] parentS1Left_statechart_Exiting005_StatechartStatechart;
+
+int[0, 2] subS1Left_statechart_Exiting005_StatechartStatechart;
+
+int[0, 2] subS1Right_statechart_Exiting005_StatechartStatechart;
+
+bool T2_statechart_Exiting005_StatechartStatechart;
+
+int eventCounter_statechart_Exiting005_StatechartStatechart;
+
+bool T3_statechart_Exiting005_StatechartStatechart;
+
+bool s11finished_statechart_Exiting005_StatechartStatechart;
+
+bool __id_InitialS1RightOfParentS1Right_0_S1Right__statechart_Exiting005_StatechartStatechart;
+
+bool T1_2_statechart_Exiting005_StatechartStatechart;
+
+bool T2_1_statechart_Exiting005_StatechartStatechart;
+
+bool T2_2_statechart_Exiting005_StatechartStatechart;
+
+bool T1_1_statechart_Exiting005_StatechartStatechart;
+
+bool T1_statechart_Exiting005_StatechartStatechart;
+
+bool __id_InitialS1LeftOfParentS1Left_1_S1Left__statechart_Exiting005_StatechartStatechart;
+
+int master_statechartQueueOfstatechart[1];
+
+int[0, 6] eventId_master_statechartQueueOfstatechart_342221592_397847111;
+
+void action_397862472() {
+	bool isExec_1539098235_144182016;
+	int eventId_master_statechartQueueOfstatechart_342221592_1535942712;
+	bool isExec_1539098235_1595671713;
+	bool isExec_1539098235_1139873905;
+	bool isExec_1539098235_977732690;
+	if ((master_statechartQueueOfstatechart[0] != 0)) {
+		eventId_master_statechartQueueOfstatechart_342221592_1535942712 = master_statechartQueueOfstatechart[0];
+		master_statechartQueueOfstatechart[0] = 0;
+		if ((eventId_master_statechartQueueOfstatechart_342221592_1535942712 == 1)) {
+			startPort_in_StartSignal_In_statechart_Exiting005_StatechartStatechart = true;
+			T2_2_effect_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S1_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			T2_2_effect_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			T3_testEnd_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			S2_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			T2_statechart_Exiting005_StatechartStatechart = false;
+			T3_statechart_Exiting005_StatechartStatechart = false;
+			__id_InitialS1RightOfParentS1Right_0_S1Right__statechart_Exiting005_StatechartStatechart = false;
+			T1_2_statechart_Exiting005_StatechartStatechart = false;
+			T2_1_statechart_Exiting005_StatechartStatechart = false;
+			T2_2_statechart_Exiting005_StatechartStatechart = false;
+			T1_1_statechart_Exiting005_StatechartStatechart = false;
+			T1_statechart_Exiting005_StatechartStatechart = false;
+			__id_InitialS1LeftOfParentS1Left_1_S1Left__statechart_Exiting005_StatechartStatechart = false;
+			isExec_1539098235_1595671713 = false;
+			if ((((subS1Left_statechart_Exiting005_StatechartStatechart == 1) &amp;&amp; generalPort_in_GeneralSignal_In_statechart_Exiting005_StatechartStatechart) &amp;&amp; s11finished_statechart_Exiting005_StatechartStatechart)) {
+				if ((subS1Left_statechart_Exiting005_StatechartStatechart == 1)) {
+					eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+					S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+					S1_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+					s11finished_statechart_Exiting005_StatechartStatechart = true;
+				}
+				T1_2_statechart_Exiting005_StatechartStatechart = true;
+				subS1Left_statechart_Exiting005_StatechartStatechart = 2;
+				isExec_1539098235_1595671713 = true;
+			}
+			if (((subS1Right_statechart_Exiting005_StatechartStatechart == 1) &amp;&amp; pendingPort_in_PendingSignal_In_statechart_Exiting005_StatechartStatechart)) {
+				if ((subS1Right_statechart_Exiting005_StatechartStatechart == 1)) {
+					eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+					S2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+					S2_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				}
+				eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+				T2_2_effect_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+				T2_2_effect_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				T2_2_statechart_Exiting005_StatechartStatechart = true;
+				subS1Right_statechart_Exiting005_StatechartStatechart = 2;
+				isExec_1539098235_1595671713 = true;
+			}
+			if (!(isExec_1539098235_1595671713)) if (((subExiting005_statechart_Exiting005_StatechartStatechart == 1) &amp;&amp; startPort_in_StartSignal_In_statechart_Exiting005_StatechartStatechart)) {
+				T2_statechart_Exiting005_StatechartStatechart = true;
+				subExiting005_statechart_Exiting005_StatechartStatechart = 2;
+				__id_InitialS1LeftOfParentS1Left_1_S1Left__statechart_Exiting005_StatechartStatechart = true;
+				parentS1Left_statechart_Exiting005_StatechartStatechart = 1;
+				T1_1_statechart_Exiting005_StatechartStatechart = true;
+				subS1Left_statechart_Exiting005_StatechartStatechart = 1;
+				__id_InitialS1RightOfParentS1Right_0_S1Right__statechart_Exiting005_StatechartStatechart = true;
+				parentS1Right_statechart_Exiting005_StatechartStatechart = 1;
+				T2_1_statechart_Exiting005_StatechartStatechart = true;
+				subS1Right_statechart_Exiting005_StatechartStatechart = 1;
+			}
+			else if (((subExiting005_statechart_Exiting005_StatechartStatechart == 2) &amp;&amp; continuePort_in_ContinueSignal_In_statechart_Exiting005_StatechartStatechart)) {
+				if ((subExiting005_statechart_Exiting005_StatechartStatechart == 2)) {
+					if ((parentS1Left_statechart_Exiting005_StatechartStatechart == 1)) if ((subS1Left_statechart_Exiting005_StatechartStatechart == 1)) {
+						eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+						S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+						S1_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+						s11finished_statechart_Exiting005_StatechartStatechart = true;
+					}
+					if ((parentS1Right_statechart_Exiting005_StatechartStatechart == 1)) if ((subS1Right_statechart_Exiting005_StatechartStatechart == 1)) {
+						eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+						S2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+						S2_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+					}
+					eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+					S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+					S1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				}
+				parentS1Left_statechart_Exiting005_StatechartStatechart = 0;
+				subS1Left_statechart_Exiting005_StatechartStatechart = 0;
+				parentS1Right_statechart_Exiting005_StatechartStatechart = 0;
+				subS1Right_statechart_Exiting005_StatechartStatechart = 0;
+				eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+				T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+				T3_testEnd_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				T3_statechart_Exiting005_StatechartStatechart = true;
+				subExiting005_statechart_Exiting005_StatechartStatechart = 3;
+			}
+			continuePort_in_ContinueSignal_In_statechart_Exiting005_StatechartStatechart = false;
+			pendingPort_in_PendingSignal_In_statechart_Exiting005_StatechartStatechart = false;
+			startPort_in_StartSignal_In_statechart_Exiting005_StatechartStatechart = false;
+			generalPort_in_GeneralSignal_In_statechart_Exiting005_StatechartStatechart = false;
+		}
+		else if ((eventId_master_statechartQueueOfstatechart_342221592_1535942712 == 2)) {
+			continuePort_in_ContinueSignal_In_statechart_Exiting005_StatechartStatechart = true;
+			T2_2_effect_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S1_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			T2_2_effect_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			T3_testEnd_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			S2_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			T2_statechart_Exiting005_StatechartStatechart = false;
+			T3_statechart_Exiting005_StatechartStatechart = false;
+			__id_InitialS1RightOfParentS1Right_0_S1Right__statechart_Exiting005_StatechartStatechart = false;
+			T1_2_statechart_Exiting005_StatechartStatechart = false;
+			T2_1_statechart_Exiting005_StatechartStatechart = false;
+			T2_2_statechart_Exiting005_StatechartStatechart = false;
+			T1_1_statechart_Exiting005_StatechartStatechart = false;
+			T1_statechart_Exiting005_StatechartStatechart = false;
+			__id_InitialS1LeftOfParentS1Left_1_S1Left__statechart_Exiting005_StatechartStatechart = false;
+			isExec_1539098235_144182016 = false;
+			if ((((subS1Left_statechart_Exiting005_StatechartStatechart == 1) &amp;&amp; generalPort_in_GeneralSignal_In_statechart_Exiting005_StatechartStatechart) &amp;&amp; s11finished_statechart_Exiting005_StatechartStatechart)) {
+				if ((subS1Left_statechart_Exiting005_StatechartStatechart == 1)) {
+					eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+					S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+					S1_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+					s11finished_statechart_Exiting005_StatechartStatechart = true;
+				}
+				T1_2_statechart_Exiting005_StatechartStatechart = true;
+				subS1Left_statechart_Exiting005_StatechartStatechart = 2;
+				isExec_1539098235_144182016 = true;
+			}
+			if (((subS1Right_statechart_Exiting005_StatechartStatechart == 1) &amp;&amp; pendingPort_in_PendingSignal_In_statechart_Exiting005_StatechartStatechart)) {
+				if ((subS1Right_statechart_Exiting005_StatechartStatechart == 1)) {
+					eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+					S2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+					S2_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				}
+				eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+				T2_2_effect_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+				T2_2_effect_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				T2_2_statechart_Exiting005_StatechartStatechart = true;
+				subS1Right_statechart_Exiting005_StatechartStatechart = 2;
+				isExec_1539098235_144182016 = true;
+			}
+			if (!(isExec_1539098235_144182016)) if (((subExiting005_statechart_Exiting005_StatechartStatechart == 1) &amp;&amp; startPort_in_StartSignal_In_statechart_Exiting005_StatechartStatechart)) {
+				T2_statechart_Exiting005_StatechartStatechart = true;
+				subExiting005_statechart_Exiting005_StatechartStatechart = 2;
+				__id_InitialS1LeftOfParentS1Left_1_S1Left__statechart_Exiting005_StatechartStatechart = true;
+				parentS1Left_statechart_Exiting005_StatechartStatechart = 1;
+				T1_1_statechart_Exiting005_StatechartStatechart = true;
+				subS1Left_statechart_Exiting005_StatechartStatechart = 1;
+				__id_InitialS1RightOfParentS1Right_0_S1Right__statechart_Exiting005_StatechartStatechart = true;
+				parentS1Right_statechart_Exiting005_StatechartStatechart = 1;
+				T2_1_statechart_Exiting005_StatechartStatechart = true;
+				subS1Right_statechart_Exiting005_StatechartStatechart = 1;
+			}
+			else if (((subExiting005_statechart_Exiting005_StatechartStatechart == 2) &amp;&amp; continuePort_in_ContinueSignal_In_statechart_Exiting005_StatechartStatechart)) {
+				if ((subExiting005_statechart_Exiting005_StatechartStatechart == 2)) {
+					if ((parentS1Left_statechart_Exiting005_StatechartStatechart == 1)) if ((subS1Left_statechart_Exiting005_StatechartStatechart == 1)) {
+						eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+						S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+						S1_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+						s11finished_statechart_Exiting005_StatechartStatechart = true;
+					}
+					if ((parentS1Right_statechart_Exiting005_StatechartStatechart == 1)) if ((subS1Right_statechart_Exiting005_StatechartStatechart == 1)) {
+						eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+						S2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+						S2_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+					}
+					eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+					S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+					S1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				}
+				parentS1Left_statechart_Exiting005_StatechartStatechart = 0;
+				subS1Left_statechart_Exiting005_StatechartStatechart = 0;
+				parentS1Right_statechart_Exiting005_StatechartStatechart = 0;
+				subS1Right_statechart_Exiting005_StatechartStatechart = 0;
+				eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+				T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+				T3_testEnd_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				T3_statechart_Exiting005_StatechartStatechart = true;
+				subExiting005_statechart_Exiting005_StatechartStatechart = 3;
+			}
+			continuePort_in_ContinueSignal_In_statechart_Exiting005_StatechartStatechart = false;
+			pendingPort_in_PendingSignal_In_statechart_Exiting005_StatechartStatechart = false;
+			startPort_in_StartSignal_In_statechart_Exiting005_StatechartStatechart = false;
+			generalPort_in_GeneralSignal_In_statechart_Exiting005_StatechartStatechart = false;
+		}
+		else if ((eventId_master_statechartQueueOfstatechart_342221592_1535942712 == 3)) {
+			pendingPort_in_PendingSignal_In_statechart_Exiting005_StatechartStatechart = true;
+			T2_2_effect_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S1_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			T2_2_effect_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			T3_testEnd_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			S2_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			T2_statechart_Exiting005_StatechartStatechart = false;
+			T3_statechart_Exiting005_StatechartStatechart = false;
+			__id_InitialS1RightOfParentS1Right_0_S1Right__statechart_Exiting005_StatechartStatechart = false;
+			T1_2_statechart_Exiting005_StatechartStatechart = false;
+			T2_1_statechart_Exiting005_StatechartStatechart = false;
+			T2_2_statechart_Exiting005_StatechartStatechart = false;
+			T1_1_statechart_Exiting005_StatechartStatechart = false;
+			T1_statechart_Exiting005_StatechartStatechart = false;
+			__id_InitialS1LeftOfParentS1Left_1_S1Left__statechart_Exiting005_StatechartStatechart = false;
+			isExec_1539098235_977732690 = false;
+			if ((((subS1Left_statechart_Exiting005_StatechartStatechart == 1) &amp;&amp; generalPort_in_GeneralSignal_In_statechart_Exiting005_StatechartStatechart) &amp;&amp; s11finished_statechart_Exiting005_StatechartStatechart)) {
+				if ((subS1Left_statechart_Exiting005_StatechartStatechart == 1)) {
+					eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+					S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+					S1_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+					s11finished_statechart_Exiting005_StatechartStatechart = true;
+				}
+				T1_2_statechart_Exiting005_StatechartStatechart = true;
+				subS1Left_statechart_Exiting005_StatechartStatechart = 2;
+				isExec_1539098235_977732690 = true;
+			}
+			if (((subS1Right_statechart_Exiting005_StatechartStatechart == 1) &amp;&amp; pendingPort_in_PendingSignal_In_statechart_Exiting005_StatechartStatechart)) {
+				if ((subS1Right_statechart_Exiting005_StatechartStatechart == 1)) {
+					eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+					S2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+					S2_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				}
+				eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+				T2_2_effect_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+				T2_2_effect_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				T2_2_statechart_Exiting005_StatechartStatechart = true;
+				subS1Right_statechart_Exiting005_StatechartStatechart = 2;
+				isExec_1539098235_977732690 = true;
+			}
+			if (!(isExec_1539098235_977732690)) if (((subExiting005_statechart_Exiting005_StatechartStatechart == 1) &amp;&amp; startPort_in_StartSignal_In_statechart_Exiting005_StatechartStatechart)) {
+				T2_statechart_Exiting005_StatechartStatechart = true;
+				subExiting005_statechart_Exiting005_StatechartStatechart = 2;
+				__id_InitialS1LeftOfParentS1Left_1_S1Left__statechart_Exiting005_StatechartStatechart = true;
+				parentS1Left_statechart_Exiting005_StatechartStatechart = 1;
+				T1_1_statechart_Exiting005_StatechartStatechart = true;
+				subS1Left_statechart_Exiting005_StatechartStatechart = 1;
+				__id_InitialS1RightOfParentS1Right_0_S1Right__statechart_Exiting005_StatechartStatechart = true;
+				parentS1Right_statechart_Exiting005_StatechartStatechart = 1;
+				T2_1_statechart_Exiting005_StatechartStatechart = true;
+				subS1Right_statechart_Exiting005_StatechartStatechart = 1;
+			}
+			else if (((subExiting005_statechart_Exiting005_StatechartStatechart == 2) &amp;&amp; continuePort_in_ContinueSignal_In_statechart_Exiting005_StatechartStatechart)) {
+				if ((subExiting005_statechart_Exiting005_StatechartStatechart == 2)) {
+					if ((parentS1Left_statechart_Exiting005_StatechartStatechart == 1)) if ((subS1Left_statechart_Exiting005_StatechartStatechart == 1)) {
+						eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+						S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+						S1_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+						s11finished_statechart_Exiting005_StatechartStatechart = true;
+					}
+					if ((parentS1Right_statechart_Exiting005_StatechartStatechart == 1)) if ((subS1Right_statechart_Exiting005_StatechartStatechart == 1)) {
+						eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+						S2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+						S2_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+					}
+					eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+					S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+					S1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				}
+				parentS1Left_statechart_Exiting005_StatechartStatechart = 0;
+				subS1Left_statechart_Exiting005_StatechartStatechart = 0;
+				parentS1Right_statechart_Exiting005_StatechartStatechart = 0;
+				subS1Right_statechart_Exiting005_StatechartStatechart = 0;
+				eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+				T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+				T3_testEnd_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				T3_statechart_Exiting005_StatechartStatechart = true;
+				subExiting005_statechart_Exiting005_StatechartStatechart = 3;
+			}
+			continuePort_in_ContinueSignal_In_statechart_Exiting005_StatechartStatechart = false;
+			pendingPort_in_PendingSignal_In_statechart_Exiting005_StatechartStatechart = false;
+			startPort_in_StartSignal_In_statechart_Exiting005_StatechartStatechart = false;
+			generalPort_in_GeneralSignal_In_statechart_Exiting005_StatechartStatechart = false;
+		}
+		else {
+			generalPort_in_GeneralSignal_In_statechart_Exiting005_StatechartStatechart = true;
+			T2_2_effect_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S1_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			T2_2_effect_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			T3_testEnd_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			S2_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false;
+			S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = 0;
+			T2_statechart_Exiting005_StatechartStatechart = false;
+			T3_statechart_Exiting005_StatechartStatechart = false;
+			__id_InitialS1RightOfParentS1Right_0_S1Right__statechart_Exiting005_StatechartStatechart = false;
+			T1_2_statechart_Exiting005_StatechartStatechart = false;
+			T2_1_statechart_Exiting005_StatechartStatechart = false;
+			T2_2_statechart_Exiting005_StatechartStatechart = false;
+			T1_1_statechart_Exiting005_StatechartStatechart = false;
+			T1_statechart_Exiting005_StatechartStatechart = false;
+			__id_InitialS1LeftOfParentS1Left_1_S1Left__statechart_Exiting005_StatechartStatechart = false;
+			isExec_1539098235_1139873905 = false;
+			if ((((subS1Left_statechart_Exiting005_StatechartStatechart == 1) &amp;&amp; generalPort_in_GeneralSignal_In_statechart_Exiting005_StatechartStatechart) &amp;&amp; s11finished_statechart_Exiting005_StatechartStatechart)) {
+				if ((subS1Left_statechart_Exiting005_StatechartStatechart == 1)) {
+					eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+					S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+					S1_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+					s11finished_statechart_Exiting005_StatechartStatechart = true;
+				}
+				T1_2_statechart_Exiting005_StatechartStatechart = true;
+				subS1Left_statechart_Exiting005_StatechartStatechart = 2;
+				isExec_1539098235_1139873905 = true;
+			}
+			if (((subS1Right_statechart_Exiting005_StatechartStatechart == 1) &amp;&amp; pendingPort_in_PendingSignal_In_statechart_Exiting005_StatechartStatechart)) {
+				if ((subS1Right_statechart_Exiting005_StatechartStatechart == 1)) {
+					eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+					S2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+					S2_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				}
+				eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+				T2_2_effect_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+				T2_2_effect_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				T2_2_statechart_Exiting005_StatechartStatechart = true;
+				subS1Right_statechart_Exiting005_StatechartStatechart = 2;
+				isExec_1539098235_1139873905 = true;
+			}
+			if (!(isExec_1539098235_1139873905)) if (((subExiting005_statechart_Exiting005_StatechartStatechart == 1) &amp;&amp; startPort_in_StartSignal_In_statechart_Exiting005_StatechartStatechart)) {
+				T2_statechart_Exiting005_StatechartStatechart = true;
+				subExiting005_statechart_Exiting005_StatechartStatechart = 2;
+				__id_InitialS1LeftOfParentS1Left_1_S1Left__statechart_Exiting005_StatechartStatechart = true;
+				parentS1Left_statechart_Exiting005_StatechartStatechart = 1;
+				T1_1_statechart_Exiting005_StatechartStatechart = true;
+				subS1Left_statechart_Exiting005_StatechartStatechart = 1;
+				__id_InitialS1RightOfParentS1Right_0_S1Right__statechart_Exiting005_StatechartStatechart = true;
+				parentS1Right_statechart_Exiting005_StatechartStatechart = 1;
+				T2_1_statechart_Exiting005_StatechartStatechart = true;
+				subS1Right_statechart_Exiting005_StatechartStatechart = 1;
+			}
+			else if (((subExiting005_statechart_Exiting005_StatechartStatechart == 2) &amp;&amp; continuePort_in_ContinueSignal_In_statechart_Exiting005_StatechartStatechart)) {
+				if ((subExiting005_statechart_Exiting005_StatechartStatechart == 2)) {
+					if ((parentS1Left_statechart_Exiting005_StatechartStatechart == 1)) if ((subS1Left_statechart_Exiting005_StatechartStatechart == 1)) {
+						eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+						S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+						S1_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+						s11finished_statechart_Exiting005_StatechartStatechart = true;
+					}
+					if ((parentS1Right_statechart_Exiting005_StatechartStatechart == 1)) if ((subS1Right_statechart_Exiting005_StatechartStatechart == 1)) {
+						eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+						S2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+						S2_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+					}
+					eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+					S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+					S1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				}
+				parentS1Left_statechart_Exiting005_StatechartStatechart = 0;
+				subS1Left_statechart_Exiting005_StatechartStatechart = 0;
+				parentS1Right_statechart_Exiting005_StatechartStatechart = 0;
+				subS1Right_statechart_Exiting005_StatechartStatechart = 0;
+				eventCounter_statechart_Exiting005_StatechartStatechart = (eventCounter_statechart_Exiting005_StatechartStatechart + 1);
+				T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting005_StatechartStatechart = eventCounter_statechart_Exiting005_StatechartStatechart;
+				T3_testEnd_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = true;
+				T3_statechart_Exiting005_StatechartStatechart = true;
+				subExiting005_statechart_Exiting005_StatechartStatechart = 3;
+			}
+			continuePort_in_ContinueSignal_In_statechart_Exiting005_StatechartStatechart = false;
+			pendingPort_in_PendingSignal_In_statechart_Exiting005_StatechartStatechart = false;
+			startPort_in_StartSignal_In_statechart_Exiting005_StatechartStatechart = false;
+			generalPort_in_GeneralSignal_In_statechart_Exiting005_StatechartStatechart = false;
+		}
+	}
+}
+
+</declaration>
+<template>
+<name>
+System
+</name>
+<location id="_InitialLocation_">
+<name>
+_InitialLocation_
+</name>
+<committed/>
+</location>
+
+<location id="_StableLocation_">
+<name>
+_StableLocation_
+</name>
+</location>
+
+<location id="_EnvironmentFinishLocation_">
+<name>
+_EnvironmentFinishLocation_
+</name>
+<committed/>
+</location>
+
+<location id="_36_">
+<name>
+_36_
+</name>
+<committed/>
+</location>
+
+<location id="_37_">
+<name>
+_37_
+</name>
+<committed/>
+</location>
+
+<location id="_38_">
+<name>
+_38_
+</name>
+<committed/>
+</location>
+
+<location id="_39_">
+<name>
+_39_
+</name>
+<committed/>
+</location>
+
+<location id="_40_">
+<name>
+_40_
+</name>
+<committed/>
+</location>
+
+<location id="_41_">
+<name>
+_41_
+</name>
+<committed/>
+</location>
+<init ref="_InitialLocation_"/>
+
+<transition>
+<source ref="_InitialLocation_"/>
+<target ref="_StableLocation_"/>
+<label kind="assignment">eventCounter_statechart_Exiting005_StatechartStatechart = 0,
+s11finished_statechart_Exiting005_StatechartStatechart = false,
+T1_1_statechart_Exiting005_StatechartStatechart = false,
+T2_statechart_Exiting005_StatechartStatechart = false,
+__id_InitialS1RightOfParentS1Right_0_S1Right__statechart_Exiting005_StatechartStatechart = false,
+__id_InitialS1LeftOfParentS1Left_1_S1Left__statechart_Exiting005_StatechartStatechart = false,
+T1_statechart_Exiting005_StatechartStatechart = false,
+T2_2_statechart_Exiting005_StatechartStatechart = false,
+T1_2_statechart_Exiting005_StatechartStatechart = false,
+T3_statechart_Exiting005_StatechartStatechart = false,
+T2_1_statechart_Exiting005_StatechartStatechart = false,
+subExiting005_statechart_Exiting005_StatechartStatechart = 0,
+parentS1Right_statechart_Exiting005_StatechartStatechart = 0,
+parentS1Left_statechart_Exiting005_StatechartStatechart = 0,
+subS1Left_statechart_Exiting005_StatechartStatechart = 0,
+subS1Right_statechart_Exiting005_StatechartStatechart = 0,
+startPort_in_StartSignal_In_statechart_Exiting005_StatechartStatechart = false,
+generalPort_in_GeneralSignal_In_statechart_Exiting005_StatechartStatechart = false,
+continuePort_in_ContinueSignal_In_statechart_Exiting005_StatechartStatechart = false,
+pendingPort_in_PendingSignal_In_statechart_Exiting005_StatechartStatechart = false,
+S1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false,
+S1_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false,
+T2_2_effect_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false,
+S2_1_exit_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false,
+T3_testEnd_out_OutSignal_Out_statechart_Exiting005_StatechartStatechart = false,
+master_statechartQueueOfstatechart[0] = 0,
+T1_statechart_Exiting005_StatechartStatechart = true,
+subExiting005_statechart_Exiting005_StatechartStatechart = 1</label>
+</transition>
+
+<transition>
+<source ref="_StableLocation_"/>
+<target ref="_36_"/>
+<label kind="assignment">T2_statechart_Exiting005_StatechartStatechart = false,
+T3_statechart_Exiting005_StatechartStatechart = false,
+__id_InitialS1RightOfParentS1Right_0_S1Right__statechart_Exiting005_StatechartStatechart = false,
+T1_2_statechart_Exiting005_StatechartStatechart = false,
+T2_1_statechart_Exiting005_StatechartStatechart = false,
+T2_2_statechart_Exiting005_StatechartStatechart = false,
+T1_1_statechart_Exiting005_StatechartStatechart = false,
+T1_statechart_Exiting005_StatechartStatechart = false,
+__id_InitialS1LeftOfParentS1Left_1_S1Left__statechart_Exiting005_StatechartStatechart = false</label>
+</transition>
+
+<transition>
+<source ref="_36_"/>
+<target ref="_37_"/>
+<label kind="guard">(master_statechartQueueOfstatechart[0] == 0)</label>
+<label kind="assignment"></label>
+</transition>
+
+<transition>
+<source ref="_37_"/>
+<target ref="_38_"/>
+<label kind="assignment">eventId_master_statechartQueueOfstatechart_342221592_397847111 = 0</label>
+</transition>
+
+<transition>
+<source ref="_38_"/>
+<target ref="_39_"/>
+<label kind="select">_17_18 : int[0, 6]</label>
+<label kind="assignment">eventId_master_statechartQueueOfstatechart_342221592_397847111 = _17_18</label>
+</transition>
+
+<transition>
+<source ref="_39_"/>
+<target ref="_40_"/>
+<label kind="guard">((0 &lt; eventId_master_statechartQueueOfstatechart_342221592_397847111) &amp;&amp; (eventId_master_statechartQueueOfstatechart_342221592_397847111 &lt;= 4))</label>
+<label kind="assignment"></label>
+</transition>
+
+<transition>
+<source ref="_40_"/>
+<target ref="_41_"/>
+<label kind="assignment">master_statechartQueueOfstatechart[0] = eventId_master_statechartQueueOfstatechart_342221592_397847111</label>
+</transition>
+
+<transition>
+<source ref="_39_"/>
+<target ref="_41_"/>
+<label kind="guard">((0 >= eventId_master_statechartQueueOfstatechart_342221592_397847111) || (eventId_master_statechartQueueOfstatechart_342221592_397847111 &gt; 4))</label>
+<label kind="assignment"></label>
+</transition>
+
+<transition>
+<source ref="_36_"/>
+<target ref="_41_"/>
+<label kind="guard">(master_statechartQueueOfstatechart[0] != 0)</label>
+<label kind="assignment"></label>
+</transition>
+
+<transition>
+<source ref="_41_"/>
+<target ref="_EnvironmentFinishLocation_"/>
+<label kind="assignment">eventId_master_statechartQueueOfstatechart_342221592_397847111 = 0</label>
+</transition>
+
+<transition>
+<source ref="_EnvironmentFinishLocation_"/>
+<target ref="_StableLocation_"/>
+<label kind="assignment">action_397862472()</label>
+</transition>
+</template>
+<system>
+	P_System = System();
+	system P_System;
+</system>
+		</nta>

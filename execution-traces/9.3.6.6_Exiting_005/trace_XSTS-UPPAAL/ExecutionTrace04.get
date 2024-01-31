@@ -1,0 +1,14 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.6.6_Exiting_005/.Verification0.gsm"
+@ ("E<> (T1_statechart_Exiting005_StatechartStatechart) && P_System._StableLocation_")
+trace Exiting005Trace of Exiting005
+step {
+	act {
+		reset
+	}
+	assert {
+		state statechart_Exiting005_StatechartStatechart.SubExiting005.wait;
+		variable statechart_Exiting005_StatechartStatechart.T1 = true;
+		variable statechart_Exiting005_StatechartStatechart.eventCounter = 0;
+		variable statechart_Exiting005_StatechartStatechart.s11finished = false;
+	}
+}

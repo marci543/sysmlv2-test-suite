@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="ASCII"?>
+<hu.bme.mit.gamma.statechart.interface:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hu.bme.mit.gamma.action="http://www.mit.bme.hu/gamma/action/Model" xmlns:hu.bme.mit.gamma.expression="http://www.mit.bme.hu/gamma/expression/Model" xmlns:hu.bme.mit.gamma.statechart="http://www.mit.bme.hu/gamma/statechart/Model/Statechart" xmlns:hu.bme.mit.gamma.statechart.composite="http://www.mit.bme.hu/gamma/statechart/Model/Composite" xmlns:hu.bme.mit.gamma.statechart.interface="http://www.mit.bme.hu/gamma/statechart/Model/Interface" name="entering010View">
+  <components xsi:type="hu.bme.mit.gamma.statechart.composite:ScheduledAsynchronousCompositeComponent" name="Entering010">
+    <ports name="startPort">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.2"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="generalPort">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.1"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="S1_entry">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="S1_1_entry">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="S2_1_entry">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="T2">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="T1_1_effect">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="T2_1_effect">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="T3_testEnd">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <portBindings compositeSystemPort="//@components.0/@ports.0">
+      <instancePortReference instance="//@components.0/@components.0" port="//@components.2/@ports.0"/>
+    </portBindings>
+    <portBindings compositeSystemPort="//@components.0/@ports.1">
+      <instancePortReference instance="//@components.0/@components.0" port="//@components.2/@ports.1"/>
+    </portBindings>
+    <portBindings compositeSystemPort="//@components.0/@ports.2">
+      <instancePortReference instance="//@components.0/@components.0" port="//@components.2/@ports.2"/>
+    </portBindings>
+    <portBindings compositeSystemPort="//@components.0/@ports.3">
+      <instancePortReference instance="//@components.0/@components.0" port="//@components.2/@ports.3"/>
+    </portBindings>
+    <portBindings compositeSystemPort="//@components.0/@ports.4">
+      <instancePortReference instance="//@components.0/@components.0" port="//@components.2/@ports.4"/>
+    </portBindings>
+    <portBindings compositeSystemPort="//@components.0/@ports.5">
+      <instancePortReference instance="//@components.0/@components.0" port="//@components.2/@ports.6"/>
+    </portBindings>
+    <portBindings compositeSystemPort="//@components.0/@ports.6">
+      <instancePortReference instance="//@components.0/@components.0" port="//@components.2/@ports.7"/>
+    </portBindings>
+    <portBindings compositeSystemPort="//@components.0/@ports.7">
+      <instancePortReference instance="//@components.0/@components.0" port="//@components.2/@ports.8"/>
+    </portBindings>
+    <portBindings compositeSystemPort="//@components.0/@ports.8">
+      <instancePortReference instance="//@components.0/@components.0" port="//@components.2/@ports.11"/>
+    </portBindings>
+    <components name="statechart" type="//@components.1"/>
+  </components>
+  <components xsi:type="hu.bme.mit.gamma.statechart.composite:AsynchronousAdapter" name="statechart">
+    <controlSpecifications>
+      <trigger xsi:type="hu.bme.mit.gamma.statechart.interface:AnyTrigger"/>
+    </controlSpecifications>
+    <messageQueues name="statechartQueue" priority="1">
+      <capacity xsi:type="hu.bme.mit.gamma.expression:IntegerLiteralExpression" value="4"/>
+      <eventPassings>
+        <source xsi:type="hu.bme.mit.gamma.statechart:AnyPortEventReference" port="//@components.2/@ports.0"/>
+      </eventPassings>
+      <eventPassings>
+        <source xsi:type="hu.bme.mit.gamma.statechart:AnyPortEventReference" port="//@components.2/@ports.1"/>
+      </eventPassings>
+    </messageQueues>
+    <wrappedComponent name="statechart_Entering010_StatechartStatechart" type="//@components.2"/>
+  </components>
+  <components xsi:type="hu.bme.mit.gamma.statechart:SynchronousStatechartDefinition" name="Entering010_StatechartStatechart" schedulingOrder="BOTTOM_UP" transitionPriority="VALUE_BASED" guardEvaluation="BEGINNING_OF_STEP">
+    <ports name="startPort">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.2"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="generalPort">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.1"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="S1_entry">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="S1_1_entry">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="S2_1_entry">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="T1">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="T2">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="T1_1_effect">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="T2_1_effect">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="T1_2">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="T2_2">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <ports name="T3_testEnd">
+      <interfaceRealization>
+        <interface href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0"/>
+      </interfaceRealization>
+    </ports>
+    <regions name="SubEntering010">
+      <stateNodes xsi:type="hu.bme.mit.gamma.statechart:State" name="wait"/>
+      <stateNodes xsi:type="hu.bme.mit.gamma.statechart:State" name="S1">
+        <regions name="ParentS1Left">
+          <stateNodes xsi:type="hu.bme.mit.gamma.statechart:State" name="S1Left">
+            <regions name="SubS1Left">
+              <stateNodes xsi:type="hu.bme.mit.gamma.statechart:State" name="S1_1">
+                <entryActions xsi:type="hu.bme.mit.gamma.action:Block">
+                  <actions xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+                    <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+                    <rhs xsi:type="hu.bme.mit.gamma.expression:AddExpression">
+                      <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+                      <operands xsi:type="hu.bme.mit.gamma.expression:IntegerLiteralExpression" value="1"/>
+                    </rhs>
+                  </actions>
+                  <actions xsi:type="hu.bme.mit.gamma.statechart:RaiseEventAction" port="//@components.2/@ports.3">
+                    <arguments xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+                    <event href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0/@events.0/@event"/>
+                  </actions>
+                  <actions xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+                    <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.8"/>
+                    <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+                  </actions>
+                </entryActions>
+              </stateNodes>
+              <stateNodes xsi:type="hu.bme.mit.gamma.statechart:InitialState" name="InitialS1LeftOfSubS1Left"/>
+              <stateNodes xsi:type="hu.bme.mit.gamma.statechart:State" name="FinalStateOfSubS1Left"/>
+            </regions>
+            <entryActions xsi:type="hu.bme.mit.gamma.action:Block">
+              <actions xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+                <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+                <rhs xsi:type="hu.bme.mit.gamma.expression:AddExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:IntegerLiteralExpression" value="1"/>
+                </rhs>
+              </actions>
+              <actions xsi:type="hu.bme.mit.gamma.statechart:RaiseEventAction" port="//@components.2/@ports.7">
+                <arguments xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+                <event href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0/@events.0/@event"/>
+              </actions>
+            </entryActions>
+          </stateNodes>
+          <stateNodes xsi:type="hu.bme.mit.gamma.statechart:InitialState" name="InitialS1LeftOfParentS1Left"/>
+        </regions>
+        <regions name="ParentS1Right">
+          <stateNodes xsi:type="hu.bme.mit.gamma.statechart:State" name="S1Right">
+            <regions name="SubS1Right">
+              <stateNodes xsi:type="hu.bme.mit.gamma.statechart:State" name="S2_1">
+                <entryActions xsi:type="hu.bme.mit.gamma.action:Block">
+                  <actions xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+                    <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+                    <rhs xsi:type="hu.bme.mit.gamma.expression:AddExpression">
+                      <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+                      <operands xsi:type="hu.bme.mit.gamma.expression:IntegerLiteralExpression" value="1"/>
+                    </rhs>
+                  </actions>
+                  <actions xsi:type="hu.bme.mit.gamma.statechart:RaiseEventAction" port="//@components.2/@ports.4">
+                    <arguments xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+                    <event href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0/@events.0/@event"/>
+                  </actions>
+                  <actions xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+                    <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.9"/>
+                    <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+                  </actions>
+                </entryActions>
+              </stateNodes>
+              <stateNodes xsi:type="hu.bme.mit.gamma.statechart:InitialState" name="InitialS1RightOfSubS1Right"/>
+              <stateNodes xsi:type="hu.bme.mit.gamma.statechart:State" name="FinalStateOfSubS1Right"/>
+            </regions>
+            <entryActions xsi:type="hu.bme.mit.gamma.action:Block">
+              <actions xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+                <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+                <rhs xsi:type="hu.bme.mit.gamma.expression:AddExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:IntegerLiteralExpression" value="1"/>
+                </rhs>
+              </actions>
+              <actions xsi:type="hu.bme.mit.gamma.statechart:RaiseEventAction" port="//@components.2/@ports.8">
+                <arguments xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+                <event href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0/@events.0/@event"/>
+              </actions>
+            </entryActions>
+          </stateNodes>
+          <stateNodes xsi:type="hu.bme.mit.gamma.statechart:InitialState" name="InitialS1RightOfParentS1Right"/>
+        </regions>
+        <entryActions xsi:type="hu.bme.mit.gamma.action:Block">
+          <actions xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+            <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+            <rhs xsi:type="hu.bme.mit.gamma.expression:AddExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+              <operands xsi:type="hu.bme.mit.gamma.expression:IntegerLiteralExpression" value="1"/>
+            </rhs>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.statechart:RaiseEventAction" port="//@components.2/@ports.2">
+            <arguments xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+            <event href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0/@events.0/@event"/>
+          </actions>
+        </entryActions>
+      </stateNodes>
+      <stateNodes xsi:type="hu.bme.mit.gamma.statechart:InitialState" name="InitialEntering010OfSubEntering010"/>
+      <stateNodes xsi:type="hu.bme.mit.gamma.statechart:State" name="FinalStateOfSubEntering010"/>
+    </regions>
+    <variableDeclarations name="eventCounter">
+      <type xsi:type="hu.bme.mit.gamma.expression:IntegerTypeDefinition"/>
+      <expression xsi:type="hu.bme.mit.gamma.expression:IntegerLiteralExpression" value="0"/>
+    </variableDeclarations>
+    <variableDeclarations name="TRANSITION__TO__wait">
+      <type xsi:type="hu.bme.mit.gamma.expression:TypeReference">
+        <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0"/>
+      </type>
+      <expression xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression">
+        <typeReference>
+          <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0"/>
+        </typeReference>
+        <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0/@type/@literals.0"/>
+      </expression>
+    </variableDeclarations>
+    <variableDeclarations name="TRANSITION__FROM__wait">
+      <type xsi:type="hu.bme.mit.gamma.expression:TypeReference">
+        <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0"/>
+      </type>
+      <expression xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression">
+        <typeReference>
+          <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0"/>
+        </typeReference>
+        <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0/@type/@literals.3"/>
+      </expression>
+    </variableDeclarations>
+    <variableDeclarations name="TRANSITION__TO__S1_1">
+      <type xsi:type="hu.bme.mit.gamma.expression:TypeReference">
+        <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0"/>
+      </type>
+      <expression xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression">
+        <typeReference>
+          <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0"/>
+        </typeReference>
+        <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0/@type/@literals.1"/>
+      </expression>
+    </variableDeclarations>
+    <variableDeclarations name="TRANSITION__FROM__S1_1">
+      <type xsi:type="hu.bme.mit.gamma.expression:TypeReference">
+        <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0"/>
+      </type>
+      <expression xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression">
+        <typeReference>
+          <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0"/>
+        </typeReference>
+        <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0/@type/@literals.2"/>
+      </expression>
+    </variableDeclarations>
+    <variableDeclarations name="TRANSITION__TO__S2_1">
+      <type xsi:type="hu.bme.mit.gamma.expression:TypeReference">
+        <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0"/>
+      </type>
+      <expression xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression">
+        <typeReference>
+          <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0"/>
+        </typeReference>
+        <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0/@type/@literals.4"/>
+      </expression>
+    </variableDeclarations>
+    <variableDeclarations name="TRANSITION__FROM__S2_1">
+      <type xsi:type="hu.bme.mit.gamma.expression:TypeReference">
+        <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0"/>
+      </type>
+      <expression xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression">
+        <typeReference>
+          <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0"/>
+        </typeReference>
+        <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0/@type/@literals.5"/>
+      </expression>
+    </variableDeclarations>
+    <variableDeclarations name="TRANSITION__FROM__S1">
+      <type xsi:type="hu.bme.mit.gamma.expression:TypeReference">
+        <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0"/>
+      </type>
+      <expression xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression">
+        <typeReference>
+          <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0"/>
+        </typeReference>
+        <reference href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@typeDeclarations.0/@type/@literals.6"/>
+      </expression>
+    </variableDeclarations>
+    <variableDeclarations name="s11finished">
+      <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+    </variableDeclarations>
+    <variableDeclarations name="s21finished">
+      <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+    </variableDeclarations>
+    <variableDeclarations name="T2">
+      <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      <annotations xsi:type="hu.bme.mit.gamma.expression:ResettableVariableDeclarationAnnotation"/>
+    </variableDeclarations>
+    <variableDeclarations name="T1_2">
+      <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      <annotations xsi:type="hu.bme.mit.gamma.expression:ResettableVariableDeclarationAnnotation"/>
+    </variableDeclarations>
+    <variableDeclarations name="T2_2">
+      <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      <annotations xsi:type="hu.bme.mit.gamma.expression:ResettableVariableDeclarationAnnotation"/>
+    </variableDeclarations>
+    <variableDeclarations name="__id_InitialS1RightOfParentS1Right_0_S1Right_">
+      <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      <annotations xsi:type="hu.bme.mit.gamma.expression:ResettableVariableDeclarationAnnotation"/>
+    </variableDeclarations>
+    <variableDeclarations name="__id_InitialS1LeftOfParentS1Left_1_S1Left_">
+      <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      <annotations xsi:type="hu.bme.mit.gamma.expression:ResettableVariableDeclarationAnnotation"/>
+    </variableDeclarations>
+    <variableDeclarations name="T3">
+      <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      <annotations xsi:type="hu.bme.mit.gamma.expression:ResettableVariableDeclarationAnnotation"/>
+    </variableDeclarations>
+    <variableDeclarations name="T2_1">
+      <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      <annotations xsi:type="hu.bme.mit.gamma.expression:ResettableVariableDeclarationAnnotation"/>
+    </variableDeclarations>
+    <variableDeclarations name="T1_1">
+      <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      <annotations xsi:type="hu.bme.mit.gamma.expression:ResettableVariableDeclarationAnnotation"/>
+    </variableDeclarations>
+    <variableDeclarations name="T1">
+      <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      <annotations xsi:type="hu.bme.mit.gamma.expression:ResettableVariableDeclarationAnnotation"/>
+    </variableDeclarations>
+    <transitions priority="3" sourceState="//@components.2/@regions.0/@stateNodes.1/@regions.0/@stateNodes.0/@regions.0/@stateNodes.1" targetState="//@components.2/@regions.0/@stateNodes.1/@regions.0/@stateNodes.0/@regions.0/@stateNodes.0">
+      <effects xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.17"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+      </effects>
+      <annotations xsi:type="hu.bme.mit.gamma.statechart:TransitionIdAnnotation" name="T1_1"/>
+    </transitions>
+    <transitions priority="2" sourceState="//@components.2/@regions.0/@stateNodes.1/@regions.1/@stateNodes.1" targetState="//@components.2/@regions.0/@stateNodes.1/@regions.1/@stateNodes.0">
+      <effects xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.13"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+      </effects>
+    </transitions>
+    <transitions priority="1" sourceState="//@components.2/@regions.0/@stateNodes.2" targetState="//@components.2/@regions.0/@stateNodes.0">
+      <effects xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.18"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+      </effects>
+      <annotations xsi:type="hu.bme.mit.gamma.statechart:TransitionIdAnnotation" name="T1"/>
+    </transitions>
+    <transitions priority="2" sourceState="//@components.2/@regions.0/@stateNodes.1/@regions.0/@stateNodes.1" targetState="//@components.2/@regions.0/@stateNodes.1/@regions.0/@stateNodes.0">
+      <effects xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.14"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+      </effects>
+    </transitions>
+    <transitions priority="3" sourceState="//@components.2/@regions.0/@stateNodes.1/@regions.1/@stateNodes.0/@regions.0/@stateNodes.1" targetState="//@components.2/@regions.0/@stateNodes.1/@regions.1/@stateNodes.0/@regions.0/@stateNodes.0">
+      <effects xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.16"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+      </effects>
+      <annotations xsi:type="hu.bme.mit.gamma.statechart:TransitionIdAnnotation" name="T2_1"/>
+    </transitions>
+    <transitions priority="1" sourceState="//@components.2/@regions.0/@stateNodes.0" targetState="//@components.2/@regions.0/@stateNodes.1/@regions.0/@stateNodes.0/@regions.0/@stateNodes.0">
+      <trigger xsi:type="hu.bme.mit.gamma.statechart.interface:EventTrigger">
+        <eventReference xsi:type="hu.bme.mit.gamma.statechart:PortEventReference" port="//@components.2/@ports.0">
+          <event href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.2/@events.0/@event"/>
+        </eventReference>
+      </trigger>
+      <effects xsi:type="hu.bme.mit.gamma.action:Block">
+        <actions xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:AddExpression">
+            <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+            <operands xsi:type="hu.bme.mit.gamma.expression:IntegerLiteralExpression" value="1"/>
+          </rhs>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.statechart:RaiseEventAction" port="//@components.2/@ports.6">
+          <arguments xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+          <event href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0/@events.0/@event"/>
+        </actions>
+      </effects>
+      <effects xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.10"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+      </effects>
+      <annotations xsi:type="hu.bme.mit.gamma.statechart:TransitionIdAnnotation" name="T2"/>
+    </transitions>
+    <transitions priority="1" sourceState="//@components.2/@regions.0/@stateNodes.1" targetState="//@components.2/@regions.0/@stateNodes.3">
+      <trigger xsi:type="hu.bme.mit.gamma.statechart.interface:EventTrigger">
+        <eventReference xsi:type="hu.bme.mit.gamma.statechart:PortEventReference" port="//@components.2/@ports.1">
+          <event href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.1/@events.0/@event"/>
+        </eventReference>
+      </trigger>
+      <guard xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+        <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.8"/>
+        <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.9"/>
+      </guard>
+      <effects xsi:type="hu.bme.mit.gamma.action:Block">
+        <actions xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:AddExpression">
+            <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+            <operands xsi:type="hu.bme.mit.gamma.expression:IntegerLiteralExpression" value="1"/>
+          </rhs>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.statechart:RaiseEventAction" port="//@components.2/@ports.11">
+          <arguments xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+          <event href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0/@events.0/@event"/>
+        </actions>
+      </effects>
+      <effects xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.15"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+      </effects>
+      <annotations xsi:type="hu.bme.mit.gamma.statechart:TransitionIdAnnotation" name="T3"/>
+    </transitions>
+    <transitions priority="3" sourceState="//@components.2/@regions.0/@stateNodes.1/@regions.0/@stateNodes.0/@regions.0/@stateNodes.0" targetState="//@components.2/@regions.0/@stateNodes.1/@regions.0/@stateNodes.0/@regions.0/@stateNodes.2">
+      <trigger xsi:type="hu.bme.mit.gamma.statechart.interface:EventTrigger">
+        <eventReference xsi:type="hu.bme.mit.gamma.statechart:PortEventReference" port="//@components.2/@ports.1">
+          <event href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.1/@events.0/@event"/>
+        </eventReference>
+      </trigger>
+      <guard xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.8"/>
+      <effects xsi:type="hu.bme.mit.gamma.action:Block">
+        <actions xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:AddExpression">
+            <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+            <operands xsi:type="hu.bme.mit.gamma.expression:IntegerLiteralExpression" value="1"/>
+          </rhs>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.statechart:RaiseEventAction" port="//@components.2/@ports.9">
+          <arguments xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+          <event href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0/@events.0/@event"/>
+        </actions>
+      </effects>
+      <effects xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.11"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+      </effects>
+      <annotations xsi:type="hu.bme.mit.gamma.statechart:TransitionIdAnnotation" name="T1_2"/>
+    </transitions>
+    <transitions priority="3" sourceState="//@components.2/@regions.0/@stateNodes.1/@regions.1/@stateNodes.0/@regions.0/@stateNodes.0" targetState="//@components.2/@regions.0/@stateNodes.1/@regions.1/@stateNodes.0/@regions.0/@stateNodes.2">
+      <trigger xsi:type="hu.bme.mit.gamma.statechart.interface:EventTrigger">
+        <eventReference xsi:type="hu.bme.mit.gamma.statechart:PortEventReference" port="//@components.2/@ports.1">
+          <event href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.1/@events.0/@event"/>
+        </eventReference>
+      </trigger>
+      <guard xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.9"/>
+      <effects xsi:type="hu.bme.mit.gamma.action:Block">
+        <actions xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:AddExpression">
+            <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+            <operands xsi:type="hu.bme.mit.gamma.expression:IntegerLiteralExpression" value="1"/>
+          </rhs>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.statechart:RaiseEventAction" port="//@components.2/@ports.10">
+          <arguments xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.0"/>
+          <event href="/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.5_Entering_010/.Verification0Declarations.gcd#//@interfaces.0/@events.0/@event"/>
+        </actions>
+      </effects>
+      <effects xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.2/@variableDeclarations.12"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+      </effects>
+      <annotations xsi:type="hu.bme.mit.gamma.statechart:TransitionIdAnnotation" name="T2_2"/>
+    </transitions>
+  </components>
+  <annotations xsi:type="hu.bme.mit.gamma.statechart.interface:UnfoldedPackageAnnotation"/>
+</hu.bme.mit.gamma.statechart.interface:Package>

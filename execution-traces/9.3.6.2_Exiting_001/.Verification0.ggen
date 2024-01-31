@@ -1,0 +1,7 @@
+import ".Verification0.gcd"
+
+analysis {
+	component : Exiting001
+	language : XSTS-UPPAAL
+	transition-coverage
+}

@@ -1,0 +1,41 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.4.9_Event_016-B/.Verification0.gsm"
+@ ("E<> (T2_1_1_statechart_Event016B_StatechartStatechart) && P_System._StableLocation_")
+trace Event016BTrace of Event016B
+step {
+	act {
+		reset
+	}
+	assert {
+		state statechart_Event016B_StatechartStatechart.SubEvent016B.wait;
+		variable statechart_Event016B_StatechartStatechart.T1 = true;
+		variable statechart_Event016B_StatechartStatechart.eventCounter = 0;
+	}
+}
+step {
+	act {
+		raise startPort.in_StartSignal()
+		schedule component
+	}
+	assert {
+		raise T2_2_1.out_OutSignal(5);
+		raise T2_1.out_OutSignal(3);
+		raise T1_1.out_OutSignal(2);
+		raise T2.out_OutSignal(1);
+		raise T2_1_1.out_OutSignal(4);
+		state statechart_Event016B_StatechartStatechart.SubEvent016B.S1;
+		state statechart_Event016B_StatechartStatechart.ParentS1Left.S1Left;
+		state statechart_Event016B_StatechartStatechart.ParentS1Right.S1Right;
+		state statechart_Event016B_StatechartStatechart.SubS1Left.S1_1;
+		state statechart_Event016B_StatechartStatechart.SubS1Right.S2_1;
+		state statechart_Event016B_StatechartStatechart.ParentS2_1Left.S2_1Left;
+		state statechart_Event016B_StatechartStatechart.ParentS2_1Right.S2_1Right;
+		state statechart_Event016B_StatechartStatechart.SubS2_1Left.S2_1_1;
+		state statechart_Event016B_StatechartStatechart.SubS2_1Right.S2_2_1;
+		variable statechart_Event016B_StatechartStatechart.T1_1 = true;
+		variable statechart_Event016B_StatechartStatechart.T2 = true;
+		variable statechart_Event016B_StatechartStatechart.T2_1 = true;
+		variable statechart_Event016B_StatechartStatechart.T2_1_1 = true;
+		variable statechart_Event016B_StatechartStatechart.T2_2_1 = true;
+		variable statechart_Event016B_StatechartStatechart.eventCounter = 5;
+	}
+}

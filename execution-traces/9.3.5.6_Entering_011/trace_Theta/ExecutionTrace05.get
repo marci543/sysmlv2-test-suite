@@ -1,0 +1,15 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.5.6_Entering_011/.Verification0.gsm"
+@ ("E<> T1_statechart_Entering011_StatechartStatechart")
+trace Entering011Trace of Entering011
+step {
+	act {
+		reset
+	}
+	assert {
+		state statechart_Entering011_StatechartStatechart.SubEntering011.waiting;
+		variable statechart_Entering011_StatechartStatechart.T1 = true;
+		variable statechart_Entering011_StatechartStatechart.eventCounter = 0;
+		variable statechart_Entering011_StatechartStatechart.s11finished = false;
+		variable statechart_Entering011_StatechartStatechart.s12finished = false;
+	}
+}

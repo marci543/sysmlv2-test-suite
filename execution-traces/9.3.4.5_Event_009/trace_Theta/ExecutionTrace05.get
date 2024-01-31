@@ -1,0 +1,54 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.4.5_Event_009/.Verification0.gsm"
+@ ("E<> T2_2_statechart_Event009_StatechartStatechart")
+trace Event009Trace of Event009
+step {
+	act {
+		reset
+	}
+	assert {
+		state statechart_Event009_StatechartStatechart.SubEvent009.waiting;
+		variable statechart_Event009_StatechartStatechart.T1 = true;
+		variable statechart_Event009_StatechartStatechart.eventCounter = 0;
+		variable statechart_Event009_StatechartStatechart.regionsFinished = 0;
+	}
+}
+step {
+	act {
+		raise startPort.in_StartSignal()
+		schedule component
+	}
+	assert {
+		raise T2_1.out_OutSignal(3);
+		raise T1_1.out_OutSignal(2);
+		raise T2.out_OutSignal(1);
+		state statechart_Event009_StatechartStatechart.SubEvent009.S1;
+		state statechart_Event009_StatechartStatechart.ParentS1Left.S1Left;
+		state statechart_Event009_StatechartStatechart.ParentS1Right.S1Right;
+		state statechart_Event009_StatechartStatechart.SubS1Left.S1_1;
+		state statechart_Event009_StatechartStatechart.SubS1Right.S1_2;
+		variable statechart_Event009_StatechartStatechart.T1_1 = true;
+		variable statechart_Event009_StatechartStatechart.T2 = true;
+		variable statechart_Event009_StatechartStatechart.T2_1 = true;
+		variable statechart_Event009_StatechartStatechart.eventCounter = 3;
+		variable statechart_Event009_StatechartStatechart.regionsFinished = 0;
+	}
+}
+step {
+	act {
+		raise continuePort.in_ContinueSignal()
+		schedule component
+	}
+	assert {
+		raise T1_2_effect.out_OutSignal(4);
+		raise T2_2_effect.out_OutSignal(5);
+		state statechart_Event009_StatechartStatechart.SubEvent009.S1;
+		state statechart_Event009_StatechartStatechart.ParentS1Left.S1Left;
+		state statechart_Event009_StatechartStatechart.ParentS1Right.S1Right;
+		state statechart_Event009_StatechartStatechart.SubS1Left.FinalStateOfSubS1Left;
+		state statechart_Event009_StatechartStatechart.SubS1Right.FinalStateOfSubS1Right;
+		variable statechart_Event009_StatechartStatechart.T1_2 = true;
+		variable statechart_Event009_StatechartStatechart.T2_2 = true;
+		variable statechart_Event009_StatechartStatechart.eventCounter = 5;
+		variable statechart_Event009_StatechartStatechart.regionsFinished = 2;
+	}
+}

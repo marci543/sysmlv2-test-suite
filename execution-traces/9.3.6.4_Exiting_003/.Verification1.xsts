@@ -1,0 +1,399 @@
+type Transition : { T1, T2, T1_1, T1_1_1, T1_1_2, T1_2_1, T1_2_2, T3 }
+type SubExiting003_Exiting003_StatechartStatechart : { __Inactive__, wait, S1, FinalStateOfSubExiting003 }
+type SubS1_Exiting003_StatechartStatechart : { __Inactive__, S1_1 }
+type ParentS1_1Right_Exiting003_StatechartStatechart : { __Inactive__, S1_1Right }
+type ParentS1_1Left_Exiting003_StatechartStatechart : { __Inactive__, S1_1Left }
+type SubS1_1Right_Exiting003_StatechartStatechart : { __Inactive__, S1_2_1, FinalStateOfSubS1_1Right }
+type SubS1_1Left_Exiting003_StatechartStatechart : { __Inactive__, S1_1_1, FinalStateOfSubS1_1Left }
+var continuePort_in_ContinueSignal_In_statechart_Exiting003_StatechartStatechart : boolean = false
+var S1_1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart : boolean = false
+ var S1_1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart : integer = 0
+var S1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart : boolean = false
+ var S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart : integer = 0
+var pendingPort_in_PendingSignal_In_statechart_Exiting003_StatechartStatechart : boolean = false
+var startPort_in_StartSignal_In_statechart_Exiting003_StatechartStatechart : boolean = false
+var T3_testEnd_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart : boolean = false
+ var T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart : integer = 0
+var S1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart : boolean = false
+ var S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart : integer = 0
+var S1_2_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart : boolean = false
+ var S1_2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart : integer = 0
+ctrl var subExiting003_statechart_Exiting003_StatechartStatechart : SubExiting003_Exiting003_StatechartStatechart = __Inactive__
+ctrl var subS1_statechart_Exiting003_StatechartStatechart : SubS1_Exiting003_StatechartStatechart = __Inactive__
+ctrl var parentS1_1Right_statechart_Exiting003_StatechartStatechart : ParentS1_1Right_Exiting003_StatechartStatechart = __Inactive__
+ctrl var parentS1_1Left_statechart_Exiting003_StatechartStatechart : ParentS1_1Left_Exiting003_StatechartStatechart = __Inactive__
+ctrl var subS1_1Right_statechart_Exiting003_StatechartStatechart : SubS1_1Right_Exiting003_StatechartStatechart = __Inactive__
+ctrl var subS1_1Left_statechart_Exiting003_StatechartStatechart : SubS1_1Left_Exiting003_StatechartStatechart = __Inactive__
+ var T3_statechart_Exiting003_StatechartStatechart : boolean = false
+ var T2_statechart_Exiting003_StatechartStatechart : boolean = false
+ var __id_InitialS1_1LeftOfParentS1_1Left_0_S1_1Left__statechart_Exiting003_StatechartStatechart : boolean = false
+ var T1_statechart_Exiting003_StatechartStatechart : boolean = false
+ var T1_1_1_statechart_Exiting003_StatechartStatechart : boolean = false
+ var T1_2_2_statechart_Exiting003_StatechartStatechart : boolean = false
+ var __id_InitialS1_1RightOfParentS1_1Right_1_S1_1Right__statechart_Exiting003_StatechartStatechart : boolean = false
+ var T1_1_statechart_Exiting003_StatechartStatechart : boolean = false
+ var T1_1_2_statechart_Exiting003_StatechartStatechart : boolean = false
+var eventCounter_statechart_Exiting003_StatechartStatechart : integer = 0
+ var T1_2_1_statechart_Exiting003_StatechartStatechart : boolean = false
+var master_statechartQueueOfstatechart : [integer] -> integer
+
+trans {
+	if ((master_statechartQueueOfstatechart[0] != 0)) {
+		local var eventId_master_statechartQueueOfstatechart_459352042 : integer = master_statechartQueueOfstatechart[0];
+		master_statechartQueueOfstatechart := [0 <- 0, default <- 0];
+		if ((eventId_master_statechartQueueOfstatechart_459352042 == 1)) {
+			startPort_in_StartSignal_In_statechart_Exiting003_StatechartStatechart := true;
+			T3_testEnd_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+			S1_2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+			S1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+			S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+			T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+			S1_1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+			S1_2_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+			S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+			S1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+			S1_1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+			T3_statechart_Exiting003_StatechartStatechart := false;
+			T2_statechart_Exiting003_StatechartStatechart := false;
+			__id_InitialS1_1LeftOfParentS1_1Left_0_S1_1Left__statechart_Exiting003_StatechartStatechart := false;
+			T1_statechart_Exiting003_StatechartStatechart := false;
+			T1_1_1_statechart_Exiting003_StatechartStatechart := false;
+			T1_2_2_statechart_Exiting003_StatechartStatechart := false;
+			__id_InitialS1_1RightOfParentS1_1Right_1_S1_1Right__statechart_Exiting003_StatechartStatechart := false;
+			T1_1_statechart_Exiting003_StatechartStatechart := false;
+			T1_1_2_statechart_Exiting003_StatechartStatechart := false;
+			T1_2_1_statechart_Exiting003_StatechartStatechart := false;
+			local var isExec_99115656 : boolean = false;
+			if (((subS1_1Right_statechart_Exiting003_StatechartStatechart == S1_2_1) && pendingPort_in_PendingSignal_In_statechart_Exiting003_StatechartStatechart)) {
+				if ((subS1_1Right_statechart_Exiting003_StatechartStatechart == S1_2_1)) {
+					eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+					S1_2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+					S1_2_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+				}
+				T1_2_2_statechart_Exiting003_StatechartStatechart := true;
+				subS1_1Right_statechart_Exiting003_StatechartStatechart := FinalStateOfSubS1_1Right;
+				isExec_99115656 := true;
+			}
+			if (((subS1_1Left_statechart_Exiting003_StatechartStatechart == S1_1_1) && pendingPort_in_PendingSignal_In_statechart_Exiting003_StatechartStatechart)) {
+				if ((subS1_1Left_statechart_Exiting003_StatechartStatechart == S1_1_1)) {
+					eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+					S1_1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+					S1_1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+				}
+				T1_1_2_statechart_Exiting003_StatechartStatechart := true;
+				subS1_1Left_statechart_Exiting003_StatechartStatechart := FinalStateOfSubS1_1Left;
+				isExec_99115656 := true;
+			}
+			if ((!(isExec_99115656))) {
+				if (((subExiting003_statechart_Exiting003_StatechartStatechart == wait) && startPort_in_StartSignal_In_statechart_Exiting003_StatechartStatechart)) {
+					T2_statechart_Exiting003_StatechartStatechart := true;
+					subExiting003_statechart_Exiting003_StatechartStatechart := S1;
+					T1_1_statechart_Exiting003_StatechartStatechart := true;
+					subS1_statechart_Exiting003_StatechartStatechart := S1_1;
+					__id_InitialS1_1RightOfParentS1_1Right_1_S1_1Right__statechart_Exiting003_StatechartStatechart := true;
+					parentS1_1Right_statechart_Exiting003_StatechartStatechart := S1_1Right;
+					T1_2_1_statechart_Exiting003_StatechartStatechart := true;
+					subS1_1Right_statechart_Exiting003_StatechartStatechart := S1_2_1;
+					__id_InitialS1_1LeftOfParentS1_1Left_0_S1_1Left__statechart_Exiting003_StatechartStatechart := true;
+					parentS1_1Left_statechart_Exiting003_StatechartStatechart := S1_1Left;
+					T1_1_1_statechart_Exiting003_StatechartStatechart := true;
+					subS1_1Left_statechart_Exiting003_StatechartStatechart := S1_1_1;
+				}
+				else {
+					if (((subExiting003_statechart_Exiting003_StatechartStatechart == S1) && continuePort_in_ContinueSignal_In_statechart_Exiting003_StatechartStatechart)) {
+						if ((subExiting003_statechart_Exiting003_StatechartStatechart == S1)) {
+							if ((subS1_statechart_Exiting003_StatechartStatechart == S1_1)) {
+								if ((parentS1_1Right_statechart_Exiting003_StatechartStatechart == S1_1Right)) {
+									if ((subS1_1Right_statechart_Exiting003_StatechartStatechart == S1_2_1)) {
+										eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+										S1_2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+										S1_2_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+									}
+								}
+								if ((parentS1_1Left_statechart_Exiting003_StatechartStatechart == S1_1Left)) {
+									if ((subS1_1Left_statechart_Exiting003_StatechartStatechart == S1_1_1)) {
+										eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+										S1_1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+										S1_1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+									}
+								}
+								eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+								S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+								S1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+							}
+							eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+							S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+							S1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+						}
+						subS1_statechart_Exiting003_StatechartStatechart := __Inactive__;
+						parentS1_1Right_statechart_Exiting003_StatechartStatechart := __Inactive__;
+						subS1_1Right_statechart_Exiting003_StatechartStatechart := __Inactive__;
+						parentS1_1Left_statechart_Exiting003_StatechartStatechart := __Inactive__;
+						subS1_1Left_statechart_Exiting003_StatechartStatechart := __Inactive__;
+						eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+						T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+						T3_testEnd_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+						T3_statechart_Exiting003_StatechartStatechart := true;
+						subExiting003_statechart_Exiting003_StatechartStatechart := FinalStateOfSubExiting003;
+					}
+				}
+			}
+			continuePort_in_ContinueSignal_In_statechart_Exiting003_StatechartStatechart := false;
+			startPort_in_StartSignal_In_statechart_Exiting003_StatechartStatechart := false;
+			pendingPort_in_PendingSignal_In_statechart_Exiting003_StatechartStatechart := false;
+		}
+		else {
+			if ((eventId_master_statechartQueueOfstatechart_459352042 == 2)) {
+				continuePort_in_ContinueSignal_In_statechart_Exiting003_StatechartStatechart := true;
+				T3_testEnd_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+				S1_2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+				S1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+				S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+				T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+				S1_1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+				S1_2_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+				S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+				S1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+				S1_1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+				T3_statechart_Exiting003_StatechartStatechart := false;
+				T2_statechart_Exiting003_StatechartStatechart := false;
+				__id_InitialS1_1LeftOfParentS1_1Left_0_S1_1Left__statechart_Exiting003_StatechartStatechart := false;
+				T1_statechart_Exiting003_StatechartStatechart := false;
+				T1_1_1_statechart_Exiting003_StatechartStatechart := false;
+				T1_2_2_statechart_Exiting003_StatechartStatechart := false;
+				__id_InitialS1_1RightOfParentS1_1Right_1_S1_1Right__statechart_Exiting003_StatechartStatechart := false;
+				T1_1_statechart_Exiting003_StatechartStatechart := false;
+				T1_1_2_statechart_Exiting003_StatechartStatechart := false;
+				T1_2_1_statechart_Exiting003_StatechartStatechart := false;
+				local var isExec_99115656 : boolean = false;
+				if (((subS1_1Right_statechart_Exiting003_StatechartStatechart == S1_2_1) && pendingPort_in_PendingSignal_In_statechart_Exiting003_StatechartStatechart)) {
+					if ((subS1_1Right_statechart_Exiting003_StatechartStatechart == S1_2_1)) {
+						eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+						S1_2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+						S1_2_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+					}
+					T1_2_2_statechart_Exiting003_StatechartStatechart := true;
+					subS1_1Right_statechart_Exiting003_StatechartStatechart := FinalStateOfSubS1_1Right;
+					isExec_99115656 := true;
+				}
+				if (((subS1_1Left_statechart_Exiting003_StatechartStatechart == S1_1_1) && pendingPort_in_PendingSignal_In_statechart_Exiting003_StatechartStatechart)) {
+					if ((subS1_1Left_statechart_Exiting003_StatechartStatechart == S1_1_1)) {
+						eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+						S1_1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+						S1_1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+					}
+					T1_1_2_statechart_Exiting003_StatechartStatechart := true;
+					subS1_1Left_statechart_Exiting003_StatechartStatechart := FinalStateOfSubS1_1Left;
+					isExec_99115656 := true;
+				}
+				if ((!(isExec_99115656))) {
+					if (((subExiting003_statechart_Exiting003_StatechartStatechart == wait) && startPort_in_StartSignal_In_statechart_Exiting003_StatechartStatechart)) {
+						T2_statechart_Exiting003_StatechartStatechart := true;
+						subExiting003_statechart_Exiting003_StatechartStatechart := S1;
+						T1_1_statechart_Exiting003_StatechartStatechart := true;
+						subS1_statechart_Exiting003_StatechartStatechart := S1_1;
+						__id_InitialS1_1RightOfParentS1_1Right_1_S1_1Right__statechart_Exiting003_StatechartStatechart := true;
+						parentS1_1Right_statechart_Exiting003_StatechartStatechart := S1_1Right;
+						T1_2_1_statechart_Exiting003_StatechartStatechart := true;
+						subS1_1Right_statechart_Exiting003_StatechartStatechart := S1_2_1;
+						__id_InitialS1_1LeftOfParentS1_1Left_0_S1_1Left__statechart_Exiting003_StatechartStatechart := true;
+						parentS1_1Left_statechart_Exiting003_StatechartStatechart := S1_1Left;
+						T1_1_1_statechart_Exiting003_StatechartStatechart := true;
+						subS1_1Left_statechart_Exiting003_StatechartStatechart := S1_1_1;
+					}
+					else {
+						if (((subExiting003_statechart_Exiting003_StatechartStatechart == S1) && continuePort_in_ContinueSignal_In_statechart_Exiting003_StatechartStatechart)) {
+							if ((subExiting003_statechart_Exiting003_StatechartStatechart == S1)) {
+								if ((subS1_statechart_Exiting003_StatechartStatechart == S1_1)) {
+									if ((parentS1_1Right_statechart_Exiting003_StatechartStatechart == S1_1Right)) {
+										if ((subS1_1Right_statechart_Exiting003_StatechartStatechart == S1_2_1)) {
+											eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+											S1_2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+											S1_2_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+										}
+									}
+									if ((parentS1_1Left_statechart_Exiting003_StatechartStatechart == S1_1Left)) {
+										if ((subS1_1Left_statechart_Exiting003_StatechartStatechart == S1_1_1)) {
+											eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+											S1_1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+											S1_1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+										}
+									}
+									eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+									S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+									S1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+								}
+								eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+								S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+								S1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+							}
+							subS1_statechart_Exiting003_StatechartStatechart := __Inactive__;
+							parentS1_1Right_statechart_Exiting003_StatechartStatechart := __Inactive__;
+							subS1_1Right_statechart_Exiting003_StatechartStatechart := __Inactive__;
+							parentS1_1Left_statechart_Exiting003_StatechartStatechart := __Inactive__;
+							subS1_1Left_statechart_Exiting003_StatechartStatechart := __Inactive__;
+							eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+							T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+							T3_testEnd_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+							T3_statechart_Exiting003_StatechartStatechart := true;
+							subExiting003_statechart_Exiting003_StatechartStatechart := FinalStateOfSubExiting003;
+						}
+					}
+				}
+				continuePort_in_ContinueSignal_In_statechart_Exiting003_StatechartStatechart := false;
+				startPort_in_StartSignal_In_statechart_Exiting003_StatechartStatechart := false;
+				pendingPort_in_PendingSignal_In_statechart_Exiting003_StatechartStatechart := false;
+			}
+			else {
+				pendingPort_in_PendingSignal_In_statechart_Exiting003_StatechartStatechart := true;
+				T3_testEnd_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+				S1_2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+				S1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+				S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+				T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+				S1_1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+				S1_2_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+				S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := 0;
+				S1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+				S1_1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+				T3_statechart_Exiting003_StatechartStatechart := false;
+				T2_statechart_Exiting003_StatechartStatechart := false;
+				__id_InitialS1_1LeftOfParentS1_1Left_0_S1_1Left__statechart_Exiting003_StatechartStatechart := false;
+				T1_statechart_Exiting003_StatechartStatechart := false;
+				T1_1_1_statechart_Exiting003_StatechartStatechart := false;
+				T1_2_2_statechart_Exiting003_StatechartStatechart := false;
+				__id_InitialS1_1RightOfParentS1_1Right_1_S1_1Right__statechart_Exiting003_StatechartStatechart := false;
+				T1_1_statechart_Exiting003_StatechartStatechart := false;
+				T1_1_2_statechart_Exiting003_StatechartStatechart := false;
+				T1_2_1_statechart_Exiting003_StatechartStatechart := false;
+				local var isExec_99115656 : boolean = false;
+				if (((subS1_1Right_statechart_Exiting003_StatechartStatechart == S1_2_1) && pendingPort_in_PendingSignal_In_statechart_Exiting003_StatechartStatechart)) {
+					if ((subS1_1Right_statechart_Exiting003_StatechartStatechart == S1_2_1)) {
+						eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+						S1_2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+						S1_2_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+					}
+					T1_2_2_statechart_Exiting003_StatechartStatechart := true;
+					subS1_1Right_statechart_Exiting003_StatechartStatechart := FinalStateOfSubS1_1Right;
+					isExec_99115656 := true;
+				}
+				if (((subS1_1Left_statechart_Exiting003_StatechartStatechart == S1_1_1) && pendingPort_in_PendingSignal_In_statechart_Exiting003_StatechartStatechart)) {
+					if ((subS1_1Left_statechart_Exiting003_StatechartStatechart == S1_1_1)) {
+						eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+						S1_1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+						S1_1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+					}
+					T1_1_2_statechart_Exiting003_StatechartStatechart := true;
+					subS1_1Left_statechart_Exiting003_StatechartStatechart := FinalStateOfSubS1_1Left;
+					isExec_99115656 := true;
+				}
+				if ((!(isExec_99115656))) {
+					if (((subExiting003_statechart_Exiting003_StatechartStatechart == wait) && startPort_in_StartSignal_In_statechart_Exiting003_StatechartStatechart)) {
+						T2_statechart_Exiting003_StatechartStatechart := true;
+						subExiting003_statechart_Exiting003_StatechartStatechart := S1;
+						T1_1_statechart_Exiting003_StatechartStatechart := true;
+						subS1_statechart_Exiting003_StatechartStatechart := S1_1;
+						__id_InitialS1_1RightOfParentS1_1Right_1_S1_1Right__statechart_Exiting003_StatechartStatechart := true;
+						parentS1_1Right_statechart_Exiting003_StatechartStatechart := S1_1Right;
+						T1_2_1_statechart_Exiting003_StatechartStatechart := true;
+						subS1_1Right_statechart_Exiting003_StatechartStatechart := S1_2_1;
+						__id_InitialS1_1LeftOfParentS1_1Left_0_S1_1Left__statechart_Exiting003_StatechartStatechart := true;
+						parentS1_1Left_statechart_Exiting003_StatechartStatechart := S1_1Left;
+						T1_1_1_statechart_Exiting003_StatechartStatechart := true;
+						subS1_1Left_statechart_Exiting003_StatechartStatechart := S1_1_1;
+					}
+					else {
+						if (((subExiting003_statechart_Exiting003_StatechartStatechart == S1) && continuePort_in_ContinueSignal_In_statechart_Exiting003_StatechartStatechart)) {
+							if ((subExiting003_statechart_Exiting003_StatechartStatechart == S1)) {
+								if ((subS1_statechart_Exiting003_StatechartStatechart == S1_1)) {
+									if ((parentS1_1Right_statechart_Exiting003_StatechartStatechart == S1_1Right)) {
+										if ((subS1_1Right_statechart_Exiting003_StatechartStatechart == S1_2_1)) {
+											eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+											S1_2_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+											S1_2_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+										}
+									}
+									if ((parentS1_1Left_statechart_Exiting003_StatechartStatechart == S1_1Left)) {
+										if ((subS1_1Left_statechart_Exiting003_StatechartStatechart == S1_1_1)) {
+											eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+											S1_1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+											S1_1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+										}
+									}
+									eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+									S1_1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+									S1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+								}
+								eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+								S1_exit_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+								S1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+							}
+							subS1_statechart_Exiting003_StatechartStatechart := __Inactive__;
+							parentS1_1Right_statechart_Exiting003_StatechartStatechart := __Inactive__;
+							subS1_1Right_statechart_Exiting003_StatechartStatechart := __Inactive__;
+							parentS1_1Left_statechart_Exiting003_StatechartStatechart := __Inactive__;
+							subS1_1Left_statechart_Exiting003_StatechartStatechart := __Inactive__;
+							eventCounter_statechart_Exiting003_StatechartStatechart := (eventCounter_statechart_Exiting003_StatechartStatechart + 1);
+							T3_testEnd_out_OutSignal_Out_out_OutSignalValue_counter_statechart_Exiting003_StatechartStatechart := eventCounter_statechart_Exiting003_StatechartStatechart;
+							T3_testEnd_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := true;
+							T3_statechart_Exiting003_StatechartStatechart := true;
+							subExiting003_statechart_Exiting003_StatechartStatechart := FinalStateOfSubExiting003;
+						}
+					}
+				}
+				continuePort_in_ContinueSignal_In_statechart_Exiting003_StatechartStatechart := false;
+				startPort_in_StartSignal_In_statechart_Exiting003_StatechartStatechart := false;
+				pendingPort_in_PendingSignal_In_statechart_Exiting003_StatechartStatechart := false;
+			}
+		}
+	}
+}
+init {
+	eventCounter_statechart_Exiting003_StatechartStatechart := 0;
+	T1_1_statechart_Exiting003_StatechartStatechart := false;
+	__id_InitialS1_1LeftOfParentS1_1Left_0_S1_1Left__statechart_Exiting003_StatechartStatechart := false;
+	T2_statechart_Exiting003_StatechartStatechart := false;
+	T1_1_2_statechart_Exiting003_StatechartStatechart := false;
+	T1_1_1_statechart_Exiting003_StatechartStatechart := false;
+	__id_InitialS1_1RightOfParentS1_1Right_1_S1_1Right__statechart_Exiting003_StatechartStatechart := false;
+	T1_2_2_statechart_Exiting003_StatechartStatechart := false;
+	T1_2_1_statechart_Exiting003_StatechartStatechart := false;
+	T3_statechart_Exiting003_StatechartStatechart := false;
+	T1_statechart_Exiting003_StatechartStatechart := false;
+	subExiting003_statechart_Exiting003_StatechartStatechart := __Inactive__;
+	subS1_statechart_Exiting003_StatechartStatechart := __Inactive__;
+	parentS1_1Right_statechart_Exiting003_StatechartStatechart := __Inactive__;
+	parentS1_1Left_statechart_Exiting003_StatechartStatechart := __Inactive__;
+	subS1_1Right_statechart_Exiting003_StatechartStatechart := __Inactive__;
+	subS1_1Left_statechart_Exiting003_StatechartStatechart := __Inactive__;
+	continuePort_in_ContinueSignal_In_statechart_Exiting003_StatechartStatechart := false;
+	pendingPort_in_PendingSignal_In_statechart_Exiting003_StatechartStatechart := false;
+	startPort_in_StartSignal_In_statechart_Exiting003_StatechartStatechart := false;
+	S1_1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+	S1_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+	T3_testEnd_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+	S1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+	S1_2_1_exit_out_OutSignal_Out_statechart_Exiting003_StatechartStatechart := false;
+	master_statechartQueueOfstatechart := [0 <- 0, default <- 0];
+	T1_statechart_Exiting003_StatechartStatechart := true;
+	subExiting003_statechart_Exiting003_StatechartStatechart := wait;
+}
+env {
+	T3_statechart_Exiting003_StatechartStatechart := false;
+	T2_statechart_Exiting003_StatechartStatechart := false;
+	__id_InitialS1_1LeftOfParentS1_1Left_0_S1_1Left__statechart_Exiting003_StatechartStatechart := false;
+	T1_statechart_Exiting003_StatechartStatechart := false;
+	T1_1_1_statechart_Exiting003_StatechartStatechart := false;
+	T1_2_2_statechart_Exiting003_StatechartStatechart := false;
+	__id_InitialS1_1RightOfParentS1_1Right_1_S1_1Right__statechart_Exiting003_StatechartStatechart := false;
+	T1_1_statechart_Exiting003_StatechartStatechart := false;
+	T1_1_2_statechart_Exiting003_StatechartStatechart := false;
+	T1_2_1_statechart_Exiting003_StatechartStatechart := false;
+	if ((master_statechartQueueOfstatechart[0] == 0)) {
+		local var eventId_master_statechartQueueOfstatechart_459352042 : integer;
+		havoc eventId_master_statechartQueueOfstatechart_459352042;
+		if (((0 < eventId_master_statechartQueueOfstatechart_459352042) && (eventId_master_statechartQueueOfstatechart_459352042 <= 3))) {
+			master_statechartQueueOfstatechart[0] := eventId_master_statechartQueueOfstatechart_459352042;
+		}
+	}
+}

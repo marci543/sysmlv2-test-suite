@@ -1,0 +1,1 @@
+{"query":"E<> (T1_statechart_Event009_StatechartStatechart) && P_System._StableLocation_","result":"TRUE","parameters":["-C -T -t0"],"executionTime":"60 MILLISECONDS"}

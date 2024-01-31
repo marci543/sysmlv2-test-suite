@@ -1,0 +1,60 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.4.9_Event_016-B/.Verification0.gsm"
+component Event016B
+@
+	("statechart_Event016B_StatechartStatechart.SubEvent016B.S1 --> statechart_Event016B_StatechartStatechart.SubEvent016B.FinalStateOfSubEvent016B")
+E F [ { variable statechart_Event016B_StatechartStatechart.T3 } ]
+@
+	("statechart_Event016B_StatechartStatechart.SubS2_1Left.InitialS2_1LeftOfSubS2_1Left --> statechart_Event016B_StatechartStatechart.SubS2_1Left.S2_1_1")
+E F [ { variable statechart_Event016B_StatechartStatechart.T2_1_1 } ]
+@
+	("statechart_Event016B_StatechartStatechart.ParentS2_1Right.InitialS2_1RightOfParentS2_1Right --> statechart_Event016B_StatechartStatechart.ParentS2_1Right.S2_1Right")
+E F [ { variable
+	statechart_Event016B_StatechartStatechart.__id_InitialS2_1RightOfParentS2_1Right_0_S2_1Right_ } ]
+@
+	("statechart_Event016B_StatechartStatechart.SubS1Left.InitialS1LeftOfSubS1Left --> statechart_Event016B_StatechartStatechart.SubS1Left.S1_1")
+E F [ { variable statechart_Event016B_StatechartStatechart.T1_1 } ]
+@
+	("statechart_Event016B_StatechartStatechart.SubS1Right.S2_1 --> statechart_Event016B_StatechartStatechart.SubS1Right.S2_2")
+E F [ { variable statechart_Event016B_StatechartStatechart.T2_2 } ]
+@
+	("statechart_Event016B_StatechartStatechart.ParentS1Left.InitialS1LeftOfParentS1Left --> statechart_Event016B_StatechartStatechart.ParentS1Left.S1Left")
+E F [ { variable statechart_Event016B_StatechartStatechart.__id_InitialS1LeftOfParentS1Left_1_S1Left_ }
+	]
+@
+	("statechart_Event016B_StatechartStatechart.ParentS1Right.InitialS1RightOfParentS1Right --> statechart_Event016B_StatechartStatechart.ParentS1Right.S1Right")
+E F [ { variable statechart_Event016B_StatechartStatechart.__id_InitialS1RightOfParentS1Right_2_S1Right_
+	} ]
+@
+	("statechart_Event016B_StatechartStatechart.SubEvent016B.InitialEvent016BOfSubEvent016B --> statechart_Event016B_StatechartStatechart.SubEvent016B.wait")
+E F [ { variable statechart_Event016B_StatechartStatechart.T1 } ]
+@
+	("statechart_Event016B_StatechartStatechart.SubS2_1Right.InitialS2_1RightOfSubS2_1Right --> statechart_Event016B_StatechartStatechart.SubS2_1Right.S2_2_1")
+E F [ { variable statechart_Event016B_StatechartStatechart.T2_2_1 } ]
+@
+	("statechart_Event016B_StatechartStatechart.ParentS2_1Left.InitialS2_1LeftOfParentS2_1Left --> statechart_Event016B_StatechartStatechart.ParentS2_1Left.S2_1Left")
+E F [ { variable
+	statechart_Event016B_StatechartStatechart.__id_InitialS2_1LeftOfParentS2_1Left_3_S2_1Left_ } ]
+@
+	("statechart_Event016B_StatechartStatechart.SubEvent016B.wait --> statechart_Event016B_StatechartStatechart.SubEvent016B.S1")
+E F [ { variable statechart_Event016B_StatechartStatechart.T2 } ]
+@
+	("statechart_Event016B_StatechartStatechart.SubS2_1Left.S2_1_1 --> statechart_Event016B_StatechartStatechart.SubS2_1Left.FinalStateOfSubS2_1Left")
+E F [ { variable statechart_Event016B_StatechartStatechart.T2_1_2 } ]
+@
+	("statechart_Event016B_StatechartStatechart.SubS1Left.S1_1 --> statechart_Event016B_StatechartStatechart.SubS1Left.S1_2")
+E F [ { variable statechart_Event016B_StatechartStatechart.T1_3 } ]
+@
+	("statechart_Event016B_StatechartStatechart.SubS1Right.S2_1 --> statechart_Event016B_StatechartStatechart.SubS1Right.S2_2")
+E F [ { variable statechart_Event016B_StatechartStatechart.T2_4 } ]
+@
+	("statechart_Event016B_StatechartStatechart.SubS1Right.S2_1 --> statechart_Event016B_StatechartStatechart.SubS1Right.S2_2")
+E F [ { variable statechart_Event016B_StatechartStatechart.T2_3 } ]
+@
+	("statechart_Event016B_StatechartStatechart.SubS2_1Right.S2_2_1 --> statechart_Event016B_StatechartStatechart.SubS2_1Right.FinalStateOfSubS2_1Right")
+E F [ { variable statechart_Event016B_StatechartStatechart.T2_2_2 } ]
+@
+	("statechart_Event016B_StatechartStatechart.SubS1Left.S1_1 --> statechart_Event016B_StatechartStatechart.SubS1Left.S1_2")
+E F [ { variable statechart_Event016B_StatechartStatechart.T1_2 } ]
+@
+	("statechart_Event016B_StatechartStatechart.SubS1Right.InitialS1RightOfSubS1Right --> statechart_Event016B_StatechartStatechart.SubS1Right.S2_1")
+E F [ { variable statechart_Event016B_StatechartStatechart.T2_1 } ]

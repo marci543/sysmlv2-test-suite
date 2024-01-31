@@ -1,0 +1,171 @@
+package event019e
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.4.17_Event_019-E/.Verification1Declarations.gcd"
+scheduled-async Event019E [
+	port continuePort : provides Continue
+	port generalPort : provides General
+	port S1_1_entry : provides Trace
+	port S2_1_1_entry : provides Trace
+	port T1 : provides Trace
+	port T2 : provides Trace
+	port T1_1 : provides Trace
+	port T1_2 : provides Trace
+	port T2_1 : provides Trace
+	port T2_1_1 : provides Trace
+	port T2_1_2 : provides Trace
+	port T2_2 : provides Trace
+	port T3_testEnd : provides Trace
+] {
+	component ^statechart : ^statechart
+	bind continuePort -> ^statechart.continuePort
+	bind generalPort -> ^statechart.generalPort
+	bind S1_1_entry -> ^statechart.S1_1_entry
+	bind S2_1_1_entry -> ^statechart.S2_1_1_entry
+	bind T1 -> ^statechart.T1
+	bind T2 -> ^statechart.T2
+	bind T1_1 -> ^statechart.T1_1
+	bind T1_2 -> ^statechart.T1_2
+	bind T2_1 -> ^statechart.T2_1
+	bind T2_1_1 -> ^statechart.T2_1_1
+	bind T2_1_2 -> ^statechart.T2_1_2
+	bind T2_2 -> ^statechart.T2_2
+	bind T3_testEnd -> ^statechart.T3_testEnd
+}
+adapter ^statechart of component Event019E_StatechartStatechart : Event019E_StatechartStatechart
+{
+	when any / run
+	queue statechartQueue (priority = 1, capacity = 4) {
+		continuePort.any, generalPort.any
+	}
+}
+@RegionSchedule = bottom-up
+@TransitionPriority = value-based
+@GuardEvaluation = beginning-of-step statechart Event019E_StatechartStatechart [
+	port continuePort : provides Continue
+	port generalPort : provides General
+	port S1_1_entry : provides Trace
+	port S2_1_1_entry : provides Trace
+	port T1 : provides Trace
+	port T2 : provides Trace
+	port T1_1 : provides Trace
+	port T1_2 : provides Trace
+	port T2_1 : provides Trace
+	port T2_1_1 : provides Trace
+	port T2_1_2 : provides Trace
+	port T2_2 : provides Trace
+	port T3_testEnd : provides Trace
+] {
+	var orLeft : boolean := true
+	var orRight : boolean := true
+	var outt : boolean := false
+	var eventCounter : integer := 0
+	var TRANSITION__TO__wait : Transition := Transition::T1
+	var TRANSITION__FROM__wait : Transition := Transition::T2
+	var TRANSITION__TO__S1_1 : Transition := Transition::T1_1
+	var TRANSITION__FROM__S1_1 : Transition := Transition::T1_2
+	var TRANSITION__TO__S2_1 : Transition := Transition::T2_1
+	var TRANSITION__TO__S2_1_1 : Transition := Transition::T2_1_1
+	var TRANSITION__FROM__S2_1_1 : Transition := Transition::T2_1_2
+	var TRANSITION__FROM__S2_1 : Transition := Transition::T2_2
+	var TRANSITION__FROM__S1 : Transition := Transition::T3
+	var s11finished : boolean := false
+	var s211finished : boolean := false
+	var s21finished : boolean := false
+	region SubEvent019E {
+		state wait
+		state S1 {
+			region ParentS1Right {
+				state S1Right {
+					entry / {
+						eventCounter := eventCounter + 1;
+						raise T2_1.out_OutInteger(eventCounter);
+					}
+					region SubS1Right {
+						state S2_1 {
+							entry / {
+								eventCounter := eventCounter + 1;
+								raise T2_1_1.out_OutInteger(eventCounter);
+							}
+							region SubS2_1 {
+								state S2_1_1 {
+									entry / {
+										outt := false;
+										eventCounter := eventCounter + 1;
+										raise S2_1_1_entry.out_OutBoolean(eventCounter, outt);
+										s211finished := true;
+									}
+								}
+								initial InitialS2_1OfSubS2_1
+								state FinalStateOfSubS2_1
+							}
+						}
+						initial InitialS1RightOfSubS1Right
+						state FinalStateOfSubS1Right
+					}
+				}
+				initial InitialS1RightOfParentS1Right
+			}
+			region ParentS1Left {
+				state S1Left {
+					entry / {
+						eventCounter := eventCounter + 1;
+						raise T1_1.out_OutInteger(eventCounter);
+					}
+					region SubS1Left {
+						state S1_1 {
+							entry / {
+								outt := true;
+								eventCounter := eventCounter + 1;
+								raise S1_1_entry.out_OutBoolean(eventCounter, outt);
+								s11finished := true;
+							}
+						}
+						initial InitialS1LeftOfSubS1Left
+						state FinalStateOfSubS1Left
+					}
+				}
+				initial InitialS1LeftOfParentS1Left
+			}
+		}
+		initial InitialEvent019EOfSubEvent019E
+		state FinalStateOfSubEvent019E
+	}
+	transition (2) from InitialS1LeftOfParentS1Left to S1Left
+	@(T1)
+	transition (1) from InitialEvent019EOfSubEvent019E to wait
+	@(T2_1_1)
+	transition (4) from InitialS2_1OfSubS2_1 to S2_1_1
+	@(T2_1)
+	transition (3) from InitialS1RightOfSubS1Right to S2_1
+	@(T1_1)
+	transition (3) from InitialS1LeftOfSubS1Left to S1_1
+	transition (2) from InitialS1RightOfParentS1Right to S1Right
+	@(T2)
+	transition (1) from wait to S1 when generalPort.in_GeneralSignal / {
+		eventCounter := eventCounter + 1;
+		raise T2.out_OutInteger(eventCounter);
+	}
+	@(T3)
+	transition (1) from S1 to FinalStateOfSubEvent019E when continuePort.in_ContinueSignal / {
+		eventCounter := eventCounter + 1;
+		raise T3_testEnd.out_OutInteger(eventCounter);
+	}
+	@(T2_1_2)
+	transition (4) from S2_1_1 to FinalStateOfSubS2_1 when generalPort.in_GeneralSignal [s211finished]
+		/ {
+		eventCounter := eventCounter + 1;
+		raise T2_1_2.out_OutInteger(eventCounter);
+		s21finished := true;
+	}
+	@(T1_2)
+	transition (3) from S1_1 to FinalStateOfSubS1Left when generalPort.in_GeneralSignal [s11finished]
+		/ {
+		eventCounter := eventCounter + 1;
+		raise T1_2.out_OutInteger(eventCounter);
+	}
+	@(T2_2)
+	transition (3) from S2_1 to FinalStateOfSubS1Right when generalPort.in_GeneralSignal [s21finished]
+		/ {
+		eventCounter := eventCounter + 1;
+		raise T2_2.out_OutInteger(eventCounter);
+	}
+}

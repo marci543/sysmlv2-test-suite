@@ -1,0 +1,31 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.6.2_Exiting_001/.Verification0.gsm"
+@ ("E<> T2_statechart_Exiting001_StatechartStatechart")
+trace Exiting001Trace of Exiting001
+step {
+	act {
+		reset
+	}
+	assert {
+		state statechart_Exiting001_StatechartStatechart.SubExiting001.waiting;
+		variable statechart_Exiting001_StatechartStatechart.T1 = true;
+		variable statechart_Exiting001_StatechartStatechart.eventCounter = 0;
+	}
+}
+step {
+	act {
+		raise startPort.in_StartSignal()
+		schedule component
+	}
+	assert {
+		state statechart_Exiting001_StatechartStatechart.SubExiting001.S1;
+		state statechart_Exiting001_StatechartStatechart.ParentS1Left.S1Left;
+		state statechart_Exiting001_StatechartStatechart.ParentS1Right.S1Right;
+		state statechart_Exiting001_StatechartStatechart.SubS1Left.S1_1;
+		state statechart_Exiting001_StatechartStatechart.SubS1Right.S2_1;
+		state statechart_Exiting001_StatechartStatechart.SubS1_1.S1_1_1;
+		variable statechart_Exiting001_StatechartStatechart.T1_1 = true;
+		variable statechart_Exiting001_StatechartStatechart.T1_1_1 = true;
+		variable statechart_Exiting001_StatechartStatechart.T2 = true;
+		variable statechart_Exiting001_StatechartStatechart.eventCounter = 0;
+	}
+}

@@ -1,0 +1,1 @@
+{"query":"A[] (true) || !P_System._StableLocation_","result":"TRUE","parameters":["-C -T -t0"],"executionTime":"37 MILLISECONDS"}

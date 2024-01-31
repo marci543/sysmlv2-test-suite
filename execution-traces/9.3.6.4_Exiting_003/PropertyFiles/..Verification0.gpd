@@ -1,0 +1,34 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.6.4_Exiting_003/.Verification0.gsm"
+component Exiting003
+@
+	("statechart_Exiting003_StatechartStatechart.SubExiting003.InitialExiting003OfSubExiting003 --> statechart_Exiting003_StatechartStatechart.SubExiting003.wait")
+E F [ { variable statechart_Exiting003_StatechartStatechart.T1 } ]
+@
+	("statechart_Exiting003_StatechartStatechart.ParentS1_1Right.InitialS1_1RightOfParentS1_1Right --> statechart_Exiting003_StatechartStatechart.ParentS1_1Right.S1_1Right")
+E F [ { variable
+	statechart_Exiting003_StatechartStatechart.__id_InitialS1_1RightOfParentS1_1Right_0_S1_1Right_ } ]
+@
+	("statechart_Exiting003_StatechartStatechart.SubS1_1Left.S1_1_1 --> statechart_Exiting003_StatechartStatechart.SubS1_1Left.FinalStateOfSubS1_1Left")
+E F [ { variable statechart_Exiting003_StatechartStatechart.T1_1_2 } ]
+@
+	("statechart_Exiting003_StatechartStatechart.SubS1_1Right.InitialS1_1RightOfSubS1_1Right --> statechart_Exiting003_StatechartStatechart.SubS1_1Right.S1_2_1")
+E F [ { variable statechart_Exiting003_StatechartStatechart.T1_2_1 } ]
+@
+	("statechart_Exiting003_StatechartStatechart.SubS1_1Right.S1_2_1 --> statechart_Exiting003_StatechartStatechart.SubS1_1Right.FinalStateOfSubS1_1Right")
+E F [ { variable statechart_Exiting003_StatechartStatechart.T1_2_2 } ]
+@
+	("statechart_Exiting003_StatechartStatechart.SubExiting003.wait --> statechart_Exiting003_StatechartStatechart.SubExiting003.S1")
+E F [ { variable statechart_Exiting003_StatechartStatechart.T2 } ]
+@
+	("statechart_Exiting003_StatechartStatechart.SubS1_1Left.InitialS1_1LeftOfSubS1_1Left --> statechart_Exiting003_StatechartStatechart.SubS1_1Left.S1_1_1")
+E F [ { variable statechart_Exiting003_StatechartStatechart.T1_1_1 } ]
+@
+	("statechart_Exiting003_StatechartStatechart.SubS1.InitialS1OfSubS1 --> statechart_Exiting003_StatechartStatechart.SubS1.S1_1")
+E F [ { variable statechart_Exiting003_StatechartStatechart.T1_1 } ]
+@
+	("statechart_Exiting003_StatechartStatechart.ParentS1_1Left.InitialS1_1LeftOfParentS1_1Left --> statechart_Exiting003_StatechartStatechart.ParentS1_1Left.S1_1Left")
+E F [ { variable
+	statechart_Exiting003_StatechartStatechart.__id_InitialS1_1LeftOfParentS1_1Left_1_S1_1Left_ } ]
+@
+	("statechart_Exiting003_StatechartStatechart.SubExiting003.S1 --> statechart_Exiting003_StatechartStatechart.SubExiting003.FinalStateOfSubExiting003")
+E F [ { variable statechart_Exiting003_StatechartStatechart.T3 } ]

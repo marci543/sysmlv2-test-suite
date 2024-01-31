@@ -1,0 +1,14 @@
+package trace
+type Transition : enum {
+	T1, T2, T1_1, T1_2, T2_1, T2_1_1, T2_1_2, T2_2, T3
+}
+interface Trace {
+	out event out_OutBoolean(out_OutBooleanValue_i : integer, out_OutBooleanValue_b : boolean)
+	out event out_OutInteger(out_OutIntegerValue_i : integer)
+}
+interface Continue {
+	in event in_ContinueSignal
+}
+interface General {
+	in event in_GeneralSignal
+}

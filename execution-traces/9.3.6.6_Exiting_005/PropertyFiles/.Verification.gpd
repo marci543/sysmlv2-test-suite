@@ -1,0 +1,3 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.6.6_Exiting_005/.Verification1.gcd"
+component Exiting005
+A G [ { true } ]

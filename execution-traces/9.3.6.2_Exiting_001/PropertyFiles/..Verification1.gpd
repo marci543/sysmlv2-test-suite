@@ -1,0 +1,28 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.6.2_Exiting_001/.Verification1.gsm"
+component Exiting001
+@
+	("statechart_Exiting001_StatechartStatechart.SubExiting001.S1 --> statechart_Exiting001_StatechartStatechart.SubExiting001.FinalStateOfSubExiting001")
+E F [ { variable statechart_Exiting001_StatechartStatechart.T3 } ]
+@
+	("statechart_Exiting001_StatechartStatechart.ParentS1Left.InitialS1LeftOfParentS1Left --> statechart_Exiting001_StatechartStatechart.ParentS1Left.S1Left")
+E F [ { variable statechart_Exiting001_StatechartStatechart.__id_InitialS1LeftOfParentS1Left_0_S1Left_ }
+	]
+@
+	("statechart_Exiting001_StatechartStatechart.SubS1_1.InitialS1_1OfSubS1_1 --> statechart_Exiting001_StatechartStatechart.SubS1_1.S1_1_1")
+E F [ { variable statechart_Exiting001_StatechartStatechart.T1_1_1 } ]
+@
+	("statechart_Exiting001_StatechartStatechart.SubS1Left.InitialS1LeftOfSubS1Left --> statechart_Exiting001_StatechartStatechart.SubS1Left.S1_1")
+E F [ { variable statechart_Exiting001_StatechartStatechart.T1_1 } ]
+@
+	("statechart_Exiting001_StatechartStatechart.SubExiting001.InitialExiting001OfSubExiting001 --> statechart_Exiting001_StatechartStatechart.SubExiting001.waiting")
+E F [ { variable statechart_Exiting001_StatechartStatechart.T1 } ]
+@
+	("statechart_Exiting001_StatechartStatechart.SubS1Right.InitialS1RightOfSubS1Right --> statechart_Exiting001_StatechartStatechart.SubS1Right.S2_1")
+E F [ { variable statechart_Exiting001_StatechartStatechart.__id_InitialS1RightOfSubS1Right_1_S2_1_ } ]
+@
+	("statechart_Exiting001_StatechartStatechart.SubExiting001.waiting --> statechart_Exiting001_StatechartStatechart.SubExiting001.S1")
+E F [ { variable statechart_Exiting001_StatechartStatechart.T2 } ]
+@
+	("statechart_Exiting001_StatechartStatechart.ParentS1Right.InitialS1RightOfParentS1Right --> statechart_Exiting001_StatechartStatechart.ParentS1Right.S1Right")
+E F [ { variable
+	statechart_Exiting001_StatechartStatechart.__id_InitialS1RightOfParentS1Right_2_S1Right_ } ]

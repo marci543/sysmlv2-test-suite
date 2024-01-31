@@ -1,0 +1,13 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.6.4_Exiting_003/.Verification0.gsm"
+@ ("E<> T1_statechart_Exiting003_StatechartStatechart")
+trace Exiting003Trace of Exiting003
+step {
+	act {
+		reset
+	}
+	assert {
+		state statechart_Exiting003_StatechartStatechart.SubExiting003.wait;
+		variable statechart_Exiting003_StatechartStatechart.T1 = true;
+		variable statechart_Exiting003_StatechartStatechart.eventCounter = 0;
+	}
+}

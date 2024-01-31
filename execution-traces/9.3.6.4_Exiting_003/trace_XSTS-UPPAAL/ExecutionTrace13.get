@@ -1,0 +1,51 @@
+import "/hu.bme.mit.gamma.sysml.testmodel/PSSM/9.3.6.4_Exiting_003/.Verification1.gsm"
+@ ("E<> (T1_1_2_statechart_Exiting003_StatechartStatechart) && P_System._StableLocation_")
+trace Exiting003Trace of Exiting003
+step {
+	act {
+		reset
+	}
+	assert {
+		state statechart_Exiting003_StatechartStatechart.SubExiting003.wait;
+		variable statechart_Exiting003_StatechartStatechart.T1 = true;
+		variable statechart_Exiting003_StatechartStatechart.eventCounter = 0;
+	}
+}
+step {
+	act {
+		raise startPort.in_StartSignal()
+		schedule component
+	}
+	assert {
+		state statechart_Exiting003_StatechartStatechart.SubExiting003.S1;
+		state statechart_Exiting003_StatechartStatechart.SubS1.S1_1;
+		state statechart_Exiting003_StatechartStatechart.ParentS1_1Left.S1_1Left;
+		state statechart_Exiting003_StatechartStatechart.ParentS1_1Right.S1_1Right;
+		state statechart_Exiting003_StatechartStatechart.SubS1_1Left.S1_1_1;
+		state statechart_Exiting003_StatechartStatechart.SubS1_1Right.S1_2_1;
+		variable statechart_Exiting003_StatechartStatechart.T1_1 = true;
+		variable statechart_Exiting003_StatechartStatechart.T1_1_1 = true;
+		variable statechart_Exiting003_StatechartStatechart.T1_2_1 = true;
+		variable statechart_Exiting003_StatechartStatechart.T2 = true;
+		variable statechart_Exiting003_StatechartStatechart.eventCounter = 0;
+	}
+}
+step {
+	act {
+		raise pendingPort.in_PendingSignal()
+		schedule component
+	}
+	assert {
+		raise S1_1_1_exit.out_OutSignal(2);
+		raise S1_2_1_exit.out_OutSignal(1);
+		state statechart_Exiting003_StatechartStatechart.SubExiting003.S1;
+		state statechart_Exiting003_StatechartStatechart.SubS1.S1_1;
+		state statechart_Exiting003_StatechartStatechart.ParentS1_1Left.S1_1Left;
+		state statechart_Exiting003_StatechartStatechart.ParentS1_1Right.S1_1Right;
+		state statechart_Exiting003_StatechartStatechart.SubS1_1Left.FinalStateOfSubS1_1Left;
+		state statechart_Exiting003_StatechartStatechart.SubS1_1Right.FinalStateOfSubS1_1Right;
+		variable statechart_Exiting003_StatechartStatechart.T1_1_2 = true;
+		variable statechart_Exiting003_StatechartStatechart.T1_2_2 = true;
+		variable statechart_Exiting003_StatechartStatechart.eventCounter = 2;
+	}
+}
